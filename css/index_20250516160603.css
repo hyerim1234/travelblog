@@ -1,0 +1,12 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#event-banner {
+  background-color: #43c4fb;
+}
+#event-banner > h1 {
+  text-align: center;
+}/*# sourceMappingURL=index_20250516160603.css.map */
