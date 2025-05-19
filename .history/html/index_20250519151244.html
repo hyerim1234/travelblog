@@ -111,141 +111,108 @@
 
   <section>
     <!-- 1. 래퍼: 모바일에서 좌우 스크롤 -->
-    <div class="overflow-x-auto">
-      <!-- 2. 실제 그리드 -->
-      <div class="flex grid-col-8 grid-row-">
-        <!-- ==== 1행 ==== -->
-        <div class="p-6 text-center size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-        <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-        <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-        <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-      </div>
-
-      <div class="flex " style="margin: 4px 0px;">
-        <!-- ==== 2행 ==== -->
-        <div class="p-6 text-center size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-        <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-        <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-        <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-      </div>
-
-      <div class="flex grid-col-8 grid-row-3">
-        <!-- ==== 3행 ==== -->
-        <div class="p-6 text-center size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-        <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-        <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-        <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-        
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-
-         <div class=" p-6 text-center  size-24 bg-gray-200 ">
-          <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
-        </div>
-      </div>
-
+<div class="overflow-x-auto py-8">
+  <!-- 2. 실제 그리드 -->
+  <div
+    class="inline-grid w-max        
+           grid-cols-8 grid-rows-3    /* 8열 × 3행 */
+           divide-x divide-y divide-gray-200
+           border border-gray-200"
+  >
+    <!-- ==== 1행 ==== -->
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">지구한바퀴<br/>세계여행</p>
     </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">그림·웹툰</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">알수록 좋은 경제</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">IT 트렌드</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">사진·촬영</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">취향저격<br/>영화 리뷰</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">오늘은 이런 책</p>
+      <!-- N 뱃지 -->
+      <span class="absolute top-2 right-2 flex items-center justify-center
+                   w-5 h-5 bg-teal-500 text-white text-xs font-bold rounded-full">
+        N
+      </span>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">뮤직 인사이드</p>
+    </div>
+
+    <!-- ==== 2행 ==== -->
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">글쓰기 코치</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">직장인<br/>현실 조언</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">스타트업 경험담</p>
+      <span class="absolute top-2 right-2 flex items-center justify-center
+                   w-5 h-5 bg-teal-500 text-white text-xs font-bold rounded-full">
+        N
+      </span>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">육아 이야기</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">요리·레시피</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">건강·운동</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">멘탈 관리<br/>심리 탐구</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">디자인 스토리</p>
+    </div>
+
+    <!-- ==== 3행 ==== -->
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">문화·예술</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">건축·설계</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">인문학·철학</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">쉽게 읽는 역사</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">우리집 반려동물</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">멋진 캘리그래피</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">사랑·이별</p>
+    </div>
+    <div class="relative p-6 text-center">
+      <p class="text-gray-600 text-base">감성 에세이</p>
+      <span class="absolute top-2 right-2 flex items-center justify-center
+                   w-5 h-5 bg-teal-500 text-white text-xs font-bold rounded-full">
+        N
+      </span>
+    </div>
+  </div>
+</div>
+   
   </section>
-
-
-  <!-- 요일별 연재 : 탭 기능 -->
-
-    <section class="" style="margin: 50px 0px;">
-      <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
-        <ul class="flex flex-wrap -mb-px">
-            <li class="me-2">
-                <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Profile</a>
-            </li>
-            <li class="me-2">
-                <a href="#" class="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500" aria-current="page">Dashboard</a>
-            </li>
-            <li class="me-2">
-                <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Settings</a>
-            </li>
-            <li class="me-2">
-                <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Contacts</a>
-            </li>
-            <li>
-                <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
-            </li>
-        </ul>
-      </div>
-    </section>
-      
 </main>
 
   <footer>
