@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #event-banner{
     background-color: #e4f6fe;
     > h1{
@@ -28,3 +35,8 @@
         }
     }
 }
+
+#my_link{
+    font-family: 'Chosunilbo_myungjo', Georgia, 'Times New Roman', Times, serif !important;
+}
+
