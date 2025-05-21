@@ -46,7 +46,7 @@
   <!-- 드로어 메뉴 -->
   <!-- Drawer Sidebar -->
   <div id="sidebar-menu"
-    class="fixed top-0 left-0 z-40 w-72 h-screen overflow-y-auto transition-transform -translate-x-full bg-white border-r border-gray-200 flex flex-col justify-between"
+    class="fixed top-0 left-0 z-40 w-72 h-screen overflow-y-auto transition-transform -translate-x-full bg-white  border-gray-200 flex flex-col justify-between"
     tabindex="-1" aria-labelledby="drawer-label">
 
     <!-- 위쪽 콘텐츠 -->
@@ -65,21 +65,25 @@
 
       <!-- 프로필, 메뉴 등 상단 콘텐츠 -->
       <div class="flex flex-col items-center !p-6 w-full border border-gray-200" style="background-color: #f6f6f6;">
-        
+
         <div class="w-20 h-20 rounded-full bg-gradient-to-t from-pink-400 to-pink-500 mb-1 bg-blue-200"></div>
-        
+
         <div class="text-center !my-4">
           <p class="font-semibold text-lg">ㅎㅎㅎ</p>
-          <p class="text-sm text-gray-400 mt-0.5 break-all italic font-light" id="my_link">brunch.co.kr/@08f4a6f4b492453</p>
+          <p class="text-sm text-gray-400 mt-0.5 break-all italic font-light" id="my_link">brunch.co.kr/@08f4a6f4b492453
+          </p>
         </div>
-  
+
         <div class="flex gap-2 ">
-          <button class="w-16 h-8 px-3 py-0.5 text-[13px] bg-white border border-teal-400 text-teal-500 font-light rounded-full">글쓰기</button>
-          <button class="w-16 h-8 px-3 py-0.5 text-[13px] bg-white border border-teal-400 text-teal-500 font-light rounded-full">작가 신청</button>
+          <button
+            class="w-16 h-8 px-3 py-0.5 text-[13px] bg-white border border-teal-400 text-teal-500 font-light rounded-full">글쓰기</button>
+          <button
+            class="w-16 h-8 px-3 py-0.5 text-[13px] bg-white border border-teal-400 text-teal-500 font-light rounded-full">작가
+            신청</button>
         </div>
 
       </div>
-      
+
 
       <div class="text-center font-light text-gray-400 sidebar_middle" style="height: 252px; padding-top: 28px;">
         <ul>
@@ -91,15 +95,15 @@
           <li class="h-[34px]">글 읽는 서재</li>
           <li class="h-[34px]">피드</li>
         </ul>
-       
-        
-        
+
+
+
       </div>
-   
+
       <div class="font-[Chosunilbo_myungjo] w-36 space-y-4 text-[15px]  !mt-24 font-light text-gray-800 ">
-        <p >작가-지원</p>
+        <p>작가-지원</p>
         <p>프로젝트 보러가기</p>
-        <hr class="my-2 border-gray-800" >
+        <hr class="my-2 border-gray-800">
       </div>
 
     </div>
@@ -117,220 +121,346 @@
 
 
 
-  <main class="py-8">
+  <main class="max-w-[960px]">
     <!-- 2) 슬라이더 섹션 -->
-    <div id="controls-carousel" class="relative w-full" data-carousel="static">
-      <!-- Carousel wrapper -->
-      <div class="relative h-56 overflow-hidden rounded-lg md:h-96 bg-gray-600">
-        <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-1.svg"
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-gray-100" alt="...">
+    <!-- Flowbite Carousel Wrapper -->
+    <!-- Carousel -->
+
+    <section class="max-w-[960px] !mt-[155px]">
+      <div id="controls-carousel" class="relative w-full max-w-6xl mx-auto" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="relative h-[500px] overflow-hidden rounded-lg bg-white">
+
+          <!-- Slide 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <a href="https://brunch.co.kr/brunchbook/book44" class="block w-full h-full bg-cover bg-center"
+              style="background-image: url('https://img1.daumcdn.net/thumb/C460x648.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/gGsr/image/d5fxhJ7EC1-Sv7dRwUu8ewYhToU.jpg');">
+              <div class="bg-black/40 w-full h-full flex flex-col justify-end p-6 text-white">
+                <h2 class="text-xl font-bold">내 뒤엔 항상 네가 서 있었다</h2>
+                <p class="mt-1">by 진아</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <a href="/@@gVJc/122" class="block w-full h-full bg-cover bg-center"
+              style="background-image: url('https://img1.daumcdn.net/thumb/R320x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/gVJc/image/fKRA9aHc3p8qm6tRAvgmS63Z0BU');">
+              <div class="bg-black/40 w-full h-full flex flex-col justify-end p-6 text-white">
+                <h2 class="text-xl font-bold">바통을 넘겨받는 그 짜릿함!</h2>
+                <p class="mt-1">by 뽀득여사</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <a href="/@@7WjC/177" class="block w-full h-full bg-cover bg-center"
+              style="background-image: url('https://t1.daumcdn.net/tromm/content/20250513050025905');">
+              <div class="bg-black/40 w-full h-full flex flex-col justify-end p-6 text-white">
+                <h2 class="text-xl font-bold">나르시시스트 상사를 만나면 벌어지는 일</h2>
+                <p class="mt-1">by 하정</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <a href="/@@bC7D/192" class="block w-full h-full bg-cover bg-center"
+              style="background-image: url('https://t1.daumcdn.net/tromm/content/20250514104535589');">
+              <div class="bg-black/40 w-full h-full flex flex-col justify-end p-6 text-white">
+                <h2 class="text-xl font-bold">타임머신을 타고 중세로! 프라하를 가다</h2>
+                <p class="mt-1">by 견뚜기</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <a href="/@@hPsX/2" class="block w-full h-full bg-cover bg-center"
+              style="background-image: url('https://t1.daumcdn.net/tromm/content/20250519114919916');">
+              <div class="bg-black/40 w-full h-full flex flex-col justify-end p-6 text-white">
+                <h2 class="text-xl font-bold">슬기롭기 어려운 프랑스 처음살이</h2>
+                <p class="mt-1">by 이제 Primary</p>
+              </div>
+            </a>
+          </div>
         </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-          <img src="/docs/images/carousel/carousel-2.svg"
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-3.svg"
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-4.svg"
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-5.svg"
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+
+        <!-- Slider controls -->
+        <button type="button"
+          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 6 10">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button type="button"
+          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 6 10">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+
+
+        <!-- Custom Pagination -->
+        <div id="carousel-pagination" class="flex justify-center space-x-6 mt-6">
+          <button data-carousel-slide-to="0" class="text-gray-900 font-bold underline">01</button>
+          <button data-carousel-slide-to="1" class="text-gray-300">02</button>
+          <button data-carousel-slide-to="2" class="text-gray-300">03</button>
+          <button data-carousel-slide-to="3" class="text-gray-300">04</button>
+          <button data-carousel-slide-to="4" class="text-gray-300">05</button>
         </div>
       </div>
-      <!-- Slider controls -->
-      <button type="button"
-        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-prev>
-        <span
-          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M5 1 1 5l4 4" />
-          </svg>
-          <span class="sr-only">Previous</span>
-        </span>
-      </button>
-      <button type="button"
-        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-next>
-        <span
-          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="m1 9 4-4-4-4" />
-          </svg>
-          <span class="sr-only">Next</span>
-        </span>
-      </button>
-    </div>
+    </section>
 
 
-    <section>
-      <!-- 1. 래퍼: 모바일에서 좌우 스크롤 -->
-      <div class="overflow-x-auto">
-        <!-- 2. 실제 그리드 -->
-        <div class="flex grid-col-8 grid-row-">
-          <!-- ==== 1행 ==== -->
-          <div class="p-6 text-center size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+
+    <section class="!mt-[155px]">
+      <h3 class="text-center font-light text-2xl tracking-[0.5em] !mb-[50px]">TRAVELKEYWORD</h3>
+
+      <div class="cursor-pointer overflow-x-auto">
+        <div class="grid grid-cols-8 box-border w-max">
+          <!-- === 1행 === -->
+          <div
+            class="w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l  border-gray-200 bg-white">
+            지구한바퀴<br />세계여행
           </div>
 
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l  border-gray-200">
+            그림·웹툰
           </div>
 
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            알수록 좋은 경제
           </div>
 
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            IT<br />트렌드
           </div>
 
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            사진·촬영
           </div>
 
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            취향저격<br />영화 리뷰
           </div>
 
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white relative w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            오늘은<br />이런 책
+            <span
+              class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
           </div>
 
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
-          </div>
-        </div>
-
-        <div class="flex " style="margin: 4px 0px;">
-          <!-- ==== 2행 ==== -->
-          <div class="p-6 text-center size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l  border-r border-gray-200">
+            뮤직 인사이드
           </div>
 
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <!-- === 2행 === -->
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            글쓰기<br />코치
+          </div>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            직장인<br />현실 조언
+          </div>
+          <div
+            class="bg-white relative w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            스타트업<br />경험담
+            <span
+              class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
+          </div>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            육아 이야기
+          </div>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            요리·레시피
+          </div>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            건강·운동
+          </div>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-gray-200">
+            멘탈 관리<br />심리 탐구
+          </div>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-r border-gray-200">
+            디자인<br />스토리
           </div>
 
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <!-- === 3행 === -->
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b  border-gray-200">
+            문화·예술
           </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b border-gray-200">
+            건축·설계
           </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b  border-gray-200">
+            인문학·철학
           </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b border-gray-200">
+            쉽게 읽는<br />역사
           </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b  border-gray-200">
+            우리집<br />반려동물
           </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b border-gray-200">
+            멋진<br />캘리그래피
           </div>
-        </div>
-
-        <div class="flex grid-col-8 grid-row-3">
-          <!-- ==== 3행 ==== -->
-          <div class="p-6 text-center size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b border-gray-200">
+            사랑·이별
           </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
-          </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
-          </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
-          </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
-          </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
-          </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
-          </div>
-
-          <div class=" p-6 text-center  size-24 bg-gray-200 ">
-            <p class="text-gray-600 text-base">지구한바퀴<br />세계여행</p>
+          <div
+            class="bg-white relative w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-r border-b border-gray-200">
+            감성<br />에세이
+            <span
+              class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
           </div>
         </div>
-
       </div>
     </section>
 
 
     <!-- 요일별 연재 : 탭 기능 -->
 
-    <section class="" style="margin: 50px 0px;">
-      <div
-        class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
-        <ul class="flex flex-wrap -mb-px">
-          <li class="me-2">
-            <a href="#"
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Profile</a>
-          </li>
-          <li class="me-2">
-            <a href="#"
-              class="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500"
-              aria-current="page">Dashboard</a>
-          </li>
-          <li class="me-2">
-            <a href="#"
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Settings</a>
-          </li>
-          <li class="me-2">
-            <a href="#"
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Contacts</a>
-          </li>
-          <li>
-            <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
-          </li>
+    <section class="!mt-[146px] !mx-auto max-w-5xl px-4 bg-gray-100 py-12">
+      <h3 class="text-center font-light text-2xl mb-12">요일별 연재</h3>
+
+      <!-- 요일 탭 -->
+      <div class="mb-6 text-center">
+        <ul class="flex justify-center text-sm font-medium text-gray-500 border-b border-gray-200 "
+          data-tabs-toggle="#day-tab-content " role="tablist">
+          <li><button class="px-4 py-2 border-b-2 rounded-t-lg cursor-pointer" id="mon-tab" data-tabs-target="#mon"
+              type="button" role="tab">월</button></li>
+          <li><button class="px-4 py-2 border-b-2 rounded-t-lg cursor-pointer" id="tue-tab" data-tabs-target="#tue"
+              type="button" role="tab">화</button></li>
+          <li><button class="px-4 py-2 border-b-2 rounded-t-lg text-blue-600 border-blue-600 active cursor-pointer"
+              id="wed-tab" data-tabs-target="#wed" type="button" role="tab">수</button></li>
+          <li><button class="px-4 py-2 border-b-2 rounded-t-lg cursor-pointer" id="thu-tab" data-tabs-target="#thu"
+              type="button" role="tab">목</button></li>
+          <li><button class="px-4 py-2 border-b-2 rounded-t-lg cursor-pointer" id="fri-tab" data-tabs-target="#fri"
+              type="button" role="tab">금</button></li>
+          <li><button class="px-4 py-2 border-b-2 rounded-t-lg cursor-pointer" id="sat-tab" data-tabs-target="#sat"
+              type="button" role="tab">토</button></li>
+          <li><button class="px-4 py-2 border-b-2 rounded-t-lg cursor-pointer" id="sun-tab" data-tabs-target="#sun"
+              type="button" role="tab">일</button></li>
         </ul>
       </div>
 
-      <div class="grid grid-cols-2  bg-gray-100" style="margin-top: 20px;">
-        <div class="bg-blue-200">01</div>
-        <div class="bg-blue-400">02</div>
+      <!-- 정렬 탭 (더미) -->
+      <div class="text-sm text-gray-500 !my-3">
+        <ul class="flex items-center gap-4 text-center justify-end">
+          <li class="!mx-0"><button class="font-semibold text-gray-900">최신순</button></li>
+          <li class="!mx-0"> <button class="text-gray-500">응원순</button></li>
+          <li class="!mx-0"><button class="text-gray-500">라이킷순</button></li>
+        </ul>
       </div>
 
+      <!-- 콘텐츠 -->
+      <div id="day-tab-content" class="h-[680px]">
+        <!-- 수요일 콘텐츠 (기본 활성) -->
+        <div class="grid grid-cols-2 gap-6" id="wed" role="tabpanel" aria-labelledby="wed-tab">
+          <div class="flex items-start gap-4 bg-white p-4 rounded shadow-sm">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">감성 한 스푼</p>
+              <p class="font-medium text-gray-800">나비</p>
+              <p class="text-xs text-gray-500 mt-1">by 한진큼</p>
+            </div>
+            <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+          </div>
+          <div class="flex items-start gap-4 bg-white p-4 rounded shadow-sm">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">출산일기</p>
+              <p class="font-medium text-gray-800">어제는 엄마의 출산일이었습니다.</p>
+              <p class="text-xs text-gray-500 mt-1">by 그럴수있지</p>
+            </div>
+            <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+          </div>
+        </div>
+
+        <!-- 월요일 콘텐츠 -->
+        <div class="hidden grid grid-cols-2 bg-black" id="mon" role="tabpanel" aria-labelledby="mon-tab">
+          <div class="flex  gap-4 bg-white p-4 rounded shadow-sm w-[430px] h-20 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+          </div>
+        </div>
+
+        <!-- 화요일 콘텐츠 -->
+        <div class="hidden grid grid-cols-2 gap-6" id="tue" role="tabpanel" aria-labelledby="tue-tab">
+          <div class="flex items-start gap-4 bg-white p-4 rounded shadow-sm">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">자기돌봄</p>
+              <p class="font-medium text-gray-800">마음 다스리는 법</p>
+              <p class="text-xs text-gray-500 mt-1">by 수연</p>
+            </div>
+            <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+          </div>
+        </div>
+
+        <!-- 목~일 (더미 구성) -->
+        <div class="hidden grid grid-cols-2 gap-6" id="thu" role="tabpanel" aria-labelledby="thu-tab">
+          <p class="col-span-2 text-center text-gray-400">목요일 연재가 준비 중입니다.</p>
+        </div>
+        <div class="hidden grid grid-cols-2 gap-6" id="fri" role="tabpanel" aria-labelledby="fri-tab">
+          <p class="col-span-2 text-center text-gray-400">금요일 연재가 준비 중입니다.</p>
+        </div>
+        <div class="hidden grid grid-cols-2 gap-6" id="sat" role="tabpanel" aria-labelledby="sat-tab">
+          <p class="col-span-2 text-center text-gray-400">토요일 연재가 준비 중입니다.</p>
+        </div>
+        <div class="hidden grid grid-cols-2 gap-6" id="sun" role="tabpanel" aria-labelledby="sun-tab">
+          <p class="col-span-2 text-center text-gray-400">일요일 연재가 준비 중입니다.</p>
+        </div>
+      </div>
+
+      <!-- 전체보기 -->
+      <div class="text-center mt-10">
+        <button class="text-sm px-4 py-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-200">
+          연재 작품 전체 보기
+        </button>
+      </div>
     </section>
+
+
+
+
 
 
     <!-- 프로필 -->
 
-    <section style="min-height: 200px;" class="bg-gray-50">
+    <section style="min-height: 200px;" class="bg-gray-50 !mt-[146px] ">
       <div
         class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
         <div class="flex justify-end px-4 pt-4">
@@ -381,7 +511,7 @@
     </section>
 
 
-    <section>
+    <section class="!mt-[146px] ">
 
 
       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
@@ -536,6 +666,9 @@
   </footer>
 
 </body>
+
 <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+<!-- JS for pagination sync -->
+
 
 </html>
