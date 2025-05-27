@@ -9,7 +9,12 @@
   <link rel="preload" as="font"
     href="https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff"
     type="font/woff" crossorigin>
+
+  <!-- 1) Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+
 
 </head>
 
@@ -117,27 +122,34 @@
     </div>
   </div>
 
-  <div class="intro_brunch  w-full  max-w-[960px]  !mx-auto leading-[46px] font-[nanummyeongjo] text-xl !pt-[50px]">
-    <h3 class="tit_brunch text-[#1a1a1a] !text-xl tracking-[0.5em]">작품이 되는 이야기, 브런치스토리<span
-        class="ico_brunch ico_logo"></span>
-    </h3>
-    <p class="desc_brunch text-[#ccc]">
-      <span class="part">브런치스토리에 담긴 아름다운 작품을 감상해 보세요.<br></span>
-      <span class="part">그리고 다시 꺼내 보세요.<br></span>
-      <span class="part">
-        <span class="txt_brunch">서랍 속 간직하고 있는 글과 감성을.</span>
+  <div class="w-full max-w-[960px] mx-auto pt-[50px] font-[nanummyeongjo] leading-[46px] text-xl">
+    <!-- 제목 -->
+    <h3 class="text-[#1a1a1a] text-[32px] font-normal tracking-[0.05em] flex items-center gap-2">
+      작품이 되는 이야기, 브런치스토리
+      <span
+        class="ml-2 w-8 h-8 rounded-full bg-[#231f20] flex items-center justify-center text-white text-[20px] leading-none font-serif">
+        b
       </span>
+    </h3>
+
+    <!-- 설명 문단 -->
+    <p class="text-[#ccc] text-[24px] mt-4">
+      <span class="block">브런치스토리에 담긴 아름다운 작품을 감상해 보세요.</span>
+      <span class="block">그리고 다시 꺼내 보세요.</span>
+      <span class="block">서랍 속 간직하고 있는 글과 감성을.</span>
     </p>
 
-    <ul class="notice_wrap #home_notice text-[#ccc]">
-      <li class="notice_item">
-        <a href="https://brunch.co.kr/@brunch/343" target="_blank">
-          <span class="info_notice">2024 새로운 작가의 탄생을 축하해 주세요!</span>
+    <!-- 공지 -->
+    <ul class="mt-6 text-right">
+      <li class="text-[16px]">
+        <a href="https://brunch.co.kr/@brunch/343" target="_blank" class="text-cyan-600 italic">
+          2024 새로운 작가의 탄생을 축하해 주세요!
         </a>
-        <span class="ico_notice">notice</span>
+        <span class="ml-2 text-cyan-500 italic">notice</span>
       </li>
     </ul>
   </div>
+
 
 
 
@@ -377,7 +389,7 @@
       <!-- 요일 탭 -->
       <div class="mb-6 text-center">
         <ul class="flex justify-center text-sm font-medium text-gray-500 border-b border-gray-200 "
-          data-tabs-toggle="#day-tab-content " role="tablist">
+          data-tabs-toggle="#day-tab-content" role="tablist">
           <li><button class="px-4 py-2 border-b-2  rounded-t-lg cursor-pointer" id="mon-tab" data-tabs-target="#mon"
               type="button" role="tab">월</button></li>
           <li><button class="px-4 py-2 border-b-2  rounded-t-lg cursor-pointer" id="tue-tab" data-tabs-target="#tue"
@@ -787,143 +799,115 @@
 
 
     <!-- 1. 섹션 감싸기 -->
-    <section class="!mt-[100px] bg-white !py-12 h-[600px] relative">
-      <div class="max-w-7xl !mx-auto !px-4 !sm:px-6 lg:px-8">
-        <!-- 타이틀 -->
-        <div class="text-center !mb-12">
-          <h2 class="text-xl sm:text-2xl font-medium tracking-wide sm:tracking-widest text-gray-900 mb-2">
-            RECOMMENDED ARTICLES
-          </h2>
-          <p class="text-sm sm:text-base text-gray-500 mt-4">
-            브런치의 다양한 글을 만나보세요.
-          </p>
-        </div>
+    <!-- 슬라이드 섹션 -->
+    <!-- 1. 섹션 감싸기 -->
+    <section class="!my-20 h-[500px]">
+      <div class="max-w-6xl !mx-auto !px-4">
+        <!-- 제목 -->
+        <h2 class="text-3xl font-serif font-light text-center text-gray-900">
+          RECOMMENDED ARTICLES
+        </h2>
+        <p class="!my-4 text-center text-gray-600">
+          브런치의 다양한 글을 만나보세요.
+        </p>
 
-        <!-- Carousel Wrapper -->
-        <div id="articlesCarousel" class="relative z-0 " data-carousel="static">
-          <!-- Slides -->
-          <div class="overflow-hidden ">
-            <div class="hidden duration-700 ease-in-out !pt-24 " data-carousel-item="active">
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 !mx-16">
-                <!-- 카드 A -->
-                <div class="bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col">
-                  <a href="#">
-                    <img src="https://placehold.co/400x300" class="rounded-t-lg w-full h-[200px] object-cover"
-                      alt="썸네일" />
-                  </a>
-                  <div class="p-5 flex flex-col justify-between h-full">
-                    <a href="#">
-                      <h5 class="mb-2 text-base font-semibold text-gray-900">집에 오지 말라는 시어머니</h5>
-                    </a>
-                    <p class="mb-3 text-sm text-gray-600">
+        <!-- Swiper Carousel -->
+        <div class="relative !my-12">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+              <!-- 카드 1 -->
+              <div class="swiper-slide">
+                <div class="w-[280px] mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                  <img src="https://via.placeholder.com/400x300" alt="기사 이미지 1" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      집에 오지 말라는 시어머니
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1 line-clamp-2">
                       이번 연휴가 길어 시댁에 다녀오려 했지만, 남편은 연휴에도 일을 한다고 했다...
                     </p>
-                    <a href="#" class="inline-flex items-center text-sm text-gray-500 hover:text-gray-900">
-                      더 읽기
-                      <svg class="w-4 h-4 ms-1" fill="none" stroke="currentColor" viewBox="0 0 14 10">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M1 5h12m0 0L9 1m4 4L9 9" />
-                      </svg>
-                    </a>
+                    <p class="text-xs text-gray-400 italic mt-2">by 슈퍼엄마</p>
                   </div>
                 </div>
-                <!-- 다른 카드들도 동일 구조 반복 -->
-                 <div class="bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col ">
-                  <a href="#">
-                    <img src="https://placehold.co/400x300" class="rounded-t-lg w-full h-[200px] object-cover"
-                      alt="썸네일" />
-                  </a>
-                  <div class="p-5 flex flex-col justify-between h-full">
-                    <a href="#">
-                      <h5 class="mb-2 text-base font-semibold text-gray-900">집에 오지 말라는 시어머니</h5>
-                    </a>
-                    <p class="mb-3 text-sm text-gray-600">
-                      이번 연휴가 길어 시댁에 다녀오려 했지만, 남편은 연휴에도 일을 한다고 했다...
+              </div>
+
+              <!-- 카드 2 -->
+              <div class="swiper-slide">
+                <div class="w-[280px] mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                  <img src="https://via.placeholder.com/400x300" alt="기사 이미지 2" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      중국집에 전화로 주문하면 생기는 일
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1 line-clamp-2">
+                      가끔씩 중국집에서 배달을 시켜 먹는 일이 있다. 귀찮을 땐 역시 중국 음식이 최고!
                     </p>
-                    <a href="#" class="inline-flex items-center text-sm text-gray-500 hover:text-gray-900">
-                      더 읽기
-                      <svg class="w-4 h-4 ms-1" fill="none" stroke="currentColor" viewBox="0 0 14 10">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M1 5h12m0 0L9 1m4 4L9 9" />
-                      </svg>
-                    </a>
+                    <p class="text-xs text-gray-400 italic mt-2">by pathemata mathematata</p>
                   </div>
                 </div>
-                <div class="bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col ">
-                  <a href="#">
-                    <img src="https://placehold.co/400x300" class="rounded-t-lg w-full h-[200px] object-cover"
-                      alt="썸네일" />
-                  </a>
-                  <div class="p-5 flex flex-col justify-between h-full">
-                    <a href="#">
-                      <h5 class="mb-2 text-base font-semibold text-gray-900">집에 오지 말라는 시어머니</h5>
-                    </a>
-                    <p class="mb-3 text-sm text-gray-600">
-                      이번 연휴가 길어 시댁에 다녀오려 했지만, 남편은 연휴에도 일을 한다고 했다...
+              </div>
+
+              <!-- 카드 3 -->
+              <div class="swiper-slide">
+                <div class="w-[280px] mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                  <img src="https://via.placeholder.com/400x300" alt="기사 이미지 3" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      성심당에서는 새치기 가능
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1 line-clamp-2">
+                      나에게는 브런치 글 동무들이 있다. 그중 ‘빵’을 주제로 한 소모임이 있다...
                     </p>
-                    <a href="#" class="inline-flex items-center text-sm text-gray-500 hover:text-gray-900">
-                      더 읽기
-                      <svg class="w-4 h-4 ms-1" fill="none" stroke="currentColor" viewBox="0 0 14 10">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M1 5h12m0 0L9 1m4 4L9 9" />
-                      </svg>
-                    </a>
+                    <p class="text-xs text-gray-400 italic mt-2">by unknown</p>
                   </div>
                 </div>
-                
-                
-                <div class="bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col ">
-                  <a href="#">
-                    <img src="https://placehold.co/400x300" class="rounded-t-lg w-full h-[200px] object-cover"
-                      alt="썸네일" />
-                  </a>
-                  <div class="p-5 flex flex-col justify-between h-full">
-                    <a href="#">
-                      <h5 class="mb-2 text-base font-semibold text-gray-900">집에 오지 말라는 시어머니</h5>
-                    </a>
-                    <p class="mb-3 text-sm text-gray-600">
-                      이번 연휴가 길어 시댁에 다녀오려 했지만, 남편은 연휴에도 일을 한다고 했다...
+              </div>
+
+              <!-- 카드 4 -->
+              <div class="swiper-slide">
+                <div class="w-[280px] mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                  <img src="https://via.placeholder.com/400x300" alt="기사 이미지 4" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      퇴사하는 후배의 마지막 날
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1 line-clamp-2">
+                      퇴사하겠다는 말을 들을 때마다 나는 잠시 멈춘다. 사람들이 떠나는 이유는 보이지만...
                     </p>
-                    <a href="#" class="inline-flex items-center text-sm text-gray-500 hover:text-gray-900">
-                      더 읽기
-                      <svg class="w-4 h-4 ms-1" fill="none" stroke="currentColor" viewBox="0 0 14 10">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M1 5h12m0 0L9 1m4 4L9 9" />
-                      </svg>
-                    </a>
+                    <p class="text-xs text-gray-400 italic mt-2">by unknown</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 카드 5 -->
+              <div class="swiper-slide">
+                <div class="w-[280px] mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                  <img src="https://via.placeholder.com/400x300" alt="기사 이미지 5" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      시어머니의 농담처럼 경고처럼
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1 line-clamp-2">
+                      “자기야, 엄마 목소리 안 좋아. 몸이 안 좋아 보여.” 남편은 하루에 세 번 전화를 한다...
+                    </p>
+                    <p class="text-xs text-gray-400 italic mt-2">by unknown</p>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- 네비게이션 -->
+            <div class="swiper-button-prev text-gray-500 hover:text-gray-900 "></div>
+            <div class="swiper-button-next text-gray-500 hover:text-gray-900"></div>
           </div>
 
-          <!-- Prev 버튼 -->
-          <!-- 슬라이드 감싸는 래퍼에 relative 꼭 추가 -->
-          <div id="articlesCarousel" class="relative" data-carousel="static">
-            <!-- 버튼: Prev -->
-            <button type="button"
-              class="absolute top-[180px] left-0 !z-[50] bg-white/90 hover:bg-white p-2 rounded-full shadow-md focus:ring-2 focus:ring-teal-500 cursor-pointer"
-              data-carousel-prev>
-              <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-              </svg>
-              <span class="sr-only">Previous</span>
-            </button>
-
-            <!-- 버튼: Next -->
-            <button type="button"
-              class="absolute top-[180px] right-0  !z-[50] bg-white/90 hover:bg-white p-2 rounded-full shadow-md focus:ring-2 focus:ring-teal-500  cursor-pointer"
-              data-carousel-next>
-              <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-              <span class="sr-only">Next</span>
-            </button>
-          </div>
-
+          <!-- 페이징 -->
+          <div class="swiper-pagination !mt-6 relative z-0 !top-[280px]"></div>
         </div>
       </div>
     </section>
+
 
 
 
@@ -1057,8 +1041,29 @@
 </body>
 
 <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 16,
+  loop: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    1024: { slidesPerView: 3 },
+  },
+});
 
-<!-- JS for pagination sync -->
+
+</script>
 
 
 </html>
