@@ -122,33 +122,51 @@
     </div>
   </div>
 
-  <div class="w-full max-w-[960px] mx-auto pt-[50px] font-[nanummyeongjo] leading-[46px] text-xl">
-    <!-- 제목 -->
-    <h3 class="text-[#1a1a1a] text-[32px] font-normal tracking-[0.05em] flex items-center gap-2">
-      작품이 되는 이야기, 브런치스토리
-      <span
-        class="ml-2 w-8 h-8 rounded-full bg-[#231f20] flex items-center justify-center text-white text-[20px] leading-none font-serif">
-        b
-      </span>
-    </h3>
+  <section class="!pt-12 !px-4">
+    <div class="max-w-4xl !mx-auto 
+              font-[nanummyeongjo] 
+              text-base sm:text-lg md:text-xl lg:text-2xl 
+              leading-snug sm:leading-normal md:leading-relaxed lg:leading-[46px]">
 
-    <!-- 설명 문단 -->
-    <p class="text-[#ccc] text-[24px] mt-4">
-      <span class="block">브런치스토리에 담긴 아름다운 작품을 감상해 보세요.</span>
-      <span class="block">그리고 다시 꺼내 보세요.</span>
-      <span class="block">서랍 속 간직하고 있는 글과 감성을.</span>
-    </p>
+      <!-- 제목 -->
+      <h3 class="text-[#1a1a1a] 
+               text-2xl sm:text-3xl md:text-4xl lg:text-[32px] 
+               font-normal 
+               tracking-wide sm:tracking-[0.03em] md:tracking-[0.04em] lg:tracking-[0.05em] 
+               flex items-center gap-2">
+        작품이 되는 이야기, 브런치스토리
+        <!-- <span class="flex-shrink-0 
+                   w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 
+                   rounded-full bg-[#231f20] 
+                   flex items-center justify-center 
+                   text-white 
+                   text-sm sm:text-base md:text-lg lg:text-[20px] 
+                   font-serif">
+          b
+        </span> -->
+      </h3>
 
-    <!-- 공지 -->
-    <ul class="mt-6 text-right">
-      <li class="text-[16px]">
-        <a href="https://brunch.co.kr/@brunch/343" target="_blank" class="text-cyan-600 italic">
-          2024 새로운 작가의 탄생을 축하해 주세요!
-        </a>
-        <span class="ml-2 text-cyan-500 italic">notice</span>
-      </li>
-    </ul>
-  </div>
+      <!-- 설명 문단 -->
+      <p class="!mt-4 
+              text-[#ccc] 
+              !space-y-1 sm:space-y-2">
+        <span class="block">브런치스토리에 담긴 아름다운 작품을 감상해 보세요.</span>
+        <span class="block">그리고 다시 꺼내 보세요.</span>
+        <span class="block">서랍 속 간직하고 있는 글과 감성을.</span>
+      </p>
+
+      <!-- 공지 -->
+      <ul class="!mt-6 text-right">
+        <li class="text-sm sm:text-base md:text-[16px]">
+          <a href="https://brunch.co.kr/@brunch/343" target="_blank" class="text-cyan-600 italic hover:underline">
+            2024 새로운 작가의 탄생을 축하해 주세요!
+          </a>
+          <span class="ml-2 text-cyan-500 italic">notice</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
 
 
 
@@ -158,7 +176,7 @@
     <!-- Flowbite Carousel Wrapper -->
     <!-- Carousel -->
 
-    <section class="max-w-[960px] !mt-[155px]">
+    <section class="max-w-[960px] !mt-[15px]">
       <div id="controls-carousel" class="relative w-full max-w-6xl mx-auto" data-carousel="static">
         <!-- Carousel wrapper -->
         <div class="relative h-[500px] overflow-hidden rounded-lg bg-white">
@@ -245,8 +263,8 @@
 
 
         <!-- Custom Pagination -->
-        <div id="carousel-pagination" class="flex justify-center space-x-6 mt-6">
-          <button data-carousel-slide-to="0" class="text-gray-900 font-bold underline">01</button>
+        <div id="carousel-pagination" class="flex justify-center  !mt-6">
+          <button data-carousel-slide-to="0" class="text-gray-900 font-bold underline cusor-pointer">01</button>
           <button data-carousel-slide-to="1" class="text-gray-300">02</button>
           <button data-carousel-slide-to="2" class="text-gray-300">03</button>
           <button data-carousel-slide-to="3" class="text-gray-300">04</button>
@@ -257,121 +275,116 @@
 
 
 
-    <section class="!mt-[155px]">
-      <h3 class="text-center font-light text-2xl tracking-[0.5em] !mb-[50px]">TRAVELKEYWORD</h3>
+    <section class="!mt-[155px] px-4">
+      <h3 class="text-center font-light text-2xl tracking-[0.5em] !mb-[50px]">
+        TRAVELKEYWORD
+      </h3>
 
-      <div class="cursor-pointer overflow-x-auto">
-        <div class="grid grid-cols-8 box-border w-max">
+      <div class="overflow-x-hidden">
+        <div class="grid grid-cols-8 box-border w-full max-w-6xl mx-auto">
           <!-- === 1행 === -->
           <div
-            class="w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l  border-gray-200 bg-white">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             지구한바퀴<br />세계여행
           </div>
-
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l  border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             그림·웹툰
           </div>
-
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             알수록 좋은 경제
           </div>
-
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             IT<br />트렌드
           </div>
-
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             사진·촬영
           </div>
-
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             취향저격<br />영화 리뷰
           </div>
-
           <div
-            class="bg-white relative w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="relative w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             오늘은<br />이런 책
             <span
               class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
           </div>
-
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l  border-r border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-r border-gray-200 bg-white">
             뮤직 인사이드
           </div>
 
           <!-- === 2행 === -->
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             글쓰기<br />코치
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             직장인<br />현실 조언
           </div>
           <div
-            class="bg-white relative w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="relative w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             스타트업<br />경험담
             <span
               class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             육아 이야기
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             요리·레시피
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l   border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             건강·운동
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
             멘탈 관리<br />심리 탐구
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-r border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-r border-gray-200 bg-white">
             디자인<br />스토리
           </div>
 
           <!-- === 3행 === -->
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b  border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
             문화·예술
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
             건축·설계
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b  border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
             인문학·철학
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
             쉽게 읽는<br />역사
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b  border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
             우리집<br />반려동물
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
             멋진<br />캘리그래피
           </div>
           <div
-            class="bg-white w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-b border-gray-200">
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
             사랑·이별
           </div>
           <div
-            class="bg-white relative w-28 h-28 flex items-center justify-center text-center text-gray-700 text-sm  border-t border-l border-r border-b border-gray-200">
+            class="relative w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-r border-b border-gray-200 bg-white">
             감성<br />에세이
             <span
               class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
@@ -381,9 +394,12 @@
     </section>
 
 
+
     <!-- 요일별 연재 : 탭 기능 -->
 
-    <section class="!mt-[146px] !mx-auto max-w-5xl px-4  py-12">
+    <section class="!mt-[146px] mx-auto w-full
+                sm:max-w-xl md:max-w-3xl lg:max-w-5xl
+                px-4 py-12">
       <h3 class="text-center font-light text-2xl !mb-12">요일별 연재</h3>
 
       <!-- 요일 탭 -->
@@ -417,10 +433,10 @@
       </div>
 
       <!-- 콘텐츠 -->
-      <div id="day-tab-content" class="h-[680px]">
+      <div id="day-tab-content" class="h-full sm:h-full h-[680px] !space-y-8 !px-4 !py-4">
         <!-- 수요일 콘텐츠 (기본 활성) -->
-        <div class="grid grid-cols-2 gap-6" id="wed" role="tabpanel" aria-labelledby="wed-tab">
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="wed" role="tabpanel" aria-labelledby="wed-tab">
+          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-96 md:w-[400px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">감성 한 스푼</p>
               <p class="font-medium text-gray-800">나비</p>
@@ -428,7 +444,8 @@
             </div>
             <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
           </div>
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 ">
+
+          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm  w-96 md:w-[400px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">출산일기</p>
               <p class="font-medium text-gray-800">어제는 엄마의 출산일이었습니다.</p>
@@ -439,8 +456,9 @@
         </div>
 
         <!-- 월요일 콘텐츠 -->
-        <div class="hidden grid grid-cols-2" id="mon" role="tabpanel" aria-labelledby="mon-tab">
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="mon" role="tabpanel" aria-labelledby="mon-tab">
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -452,7 +470,7 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -463,19 +481,7 @@
             </div>
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
-            <div class="flex-1">
-              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
-              <p class="font-medium text-gray-800">나는, 비둘기</p>
-              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
-            </div>
-            <div class="">
-              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
-            </div>
-
-          </div>
-
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -487,7 +493,7 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -499,7 +505,7 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -511,7 +517,7 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -523,7 +529,7 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -535,7 +541,7 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -547,7 +553,7 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -559,7 +565,7 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -571,7 +577,19 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -587,8 +605,8 @@
         </div>
 
         <!-- 화요일 콘텐츠 -->
-        <div class="hidden grid grid-cols-2 gap-6" id="tue" role="tabpanel" aria-labelledby="tue-tab">
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="tue" role="tabpanel" aria-labelledby="tue-tab">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -600,7 +618,7 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -611,7 +629,7 @@
             </div>
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -623,7 +641,7 @@
 
           </div>
 
-          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-[430px] h-26 !mt-2">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -669,129 +687,325 @@
 
     <section class="bg-[#fafafa] !mt-[146px] !pt-[100px] !pb-[80px] ">
       <!-- 타이틀 -->
-      <div class="text-center mb-[50px]">
-        <h3 class="text-xl tracking-[0.3em] font-medium text-gray-900 mb-2">TRAVEL WRITERS</h3>
-        <p class="text-sm text-gray-400 mt-[15px]">브런치 추천 작가</p>
+      <div class="text-center !mb-[50px]">
+        <h3 class="text-xl tracking-[0.3em] font-medium text-gray-900 !mb-2">TRAVEL WRITERS</h3>
+        <p class="text-sm text-gray-400 !my-[15px]">브런치 추천 작가</p>
 
         <!-- 카테고리 탭 -->
         <ul id="travelTab" data-tabs-toggle="#travelTabContent" role="tablist"
           class="flex justify-center gap-2 mt-10 text-sm font-medium text-center">
+
           <li role="presentation">
             <button id="domestic-tab" data-tabs-target="#domestic" type="button" role="tab" aria-controls="domestic"
-              aria-selected="true"
-              class="w-[64px] h-[28px] px-4 py-1.5 text-sm text-teal-400 bg-white border border-teal-400 rounded-full font-light">
+              aria-selected="true" class="cursor-pointer w-[64px] h-[28px] px-4 py-1.5 text-sm 
+                       text-teal-400 bg-white border border-teal-400 rounded-full font-light">
               국내여행
             </button>
           </li>
+
           <li role="presentation">
             <button id="abroad-tab" data-tabs-target="#abroad" type="button" role="tab" aria-controls="abroad"
-              aria-selected="false"
-              class="w-[64px] h-[28px] px-4 py-1.5 text-sm text-gray-400 bg-white border border-gray-400 rounded-full font-light">
+              aria-selected="false" class="cursor-pointer w-[64px] h-[28px] px-4 py-1.5 text-sm 
+                       text-gray-400 bg-white border border-gray-400 rounded-full font-light">
               해외여행
             </button>
           </li>
+
           <li role="presentation">
             <button id="solo-tab" data-tabs-target="#solo" type="button" role="tab" aria-controls="solo"
-              aria-selected="false"
-              class="w-[64px] h-[28px] px-4 py-1.5 text-sm text-gray-400 bg-white border border-gray-400 rounded-full font-light">
+              aria-selected="false" class="cursor-pointer w-[64px] h-[28px] px-4 py-1.5 text-sm 
+                       text-gray-400 bg-white border border-gray-400 rounded-full font-light">
               혼자 여행
             </button>
           </li>
         </ul>
       </div>
 
-      <!-- 카드 리스트 (국내여행 탭) -->
-      <div id="travelTabContent"
-        class="max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
-        <!-- 카드 1 -->
-        <div class="bg-white px-6 py-8 rounded-lg shadow-sm text-center">
-          <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
-          <h4 class="text-base font-medium text-gray-900">김고로</h4>
-          <p class="text-sm text-gray-500 mb-3">미식 큐레이터</p>
-          <p class="text-xs text-gray-400 leading-relaxed mb-4">
-            Taste Curator & Gourmet Lover of Gangneung. 인생은 순정이다. 식문화를 수집하며 사는 중입니다.
-          </p>
-          <div class="flex justify-center flex-wrap gap-2 text-sm">
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">문화</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">요리</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-400 rounded-full">···</span>
+      <!-- 탭 콘텐츠 래퍼 -->
+      <div id="travelTabContent" class="max-w-6xl !mx-auto !px-4">
+
+        <!-- 카드 리스트 (국내여행 탭) -->
+        <div id="domestic" role="tabpanel" aria-labelledby="domestic-tab"
+          class="max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
+          <!-- 카드 1 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">김고로</h4>
+            <p class="text-sm text-gray-500 !mt-3">미식 큐레이터</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              Taste Curator & Gourmet Lover of Gangneung. 인생은 순정이다. 식문화를 수집하며 사는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 2 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">케니스트리</h4>
+            <p class="text-sm text-gray-500 !mt-3">에세이스트</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              글 쓰는 마케터 입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 3 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 꽃돼지 후니</h4>
+            <p class="text-sm text-gray-500 !mt-3">핑거 CEO</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 4 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 태화강그대</h4>
+            <p class="text-sm text-gray-500 !mt-3">주부</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              2번의 암수술을 하고 제2의 인생을 울산에서 시작했습니다. 삶을 제대로 살아보려 애쓰는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 5 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">지식농부</h4>
+            <p class="text-sm text-gray-500 !mt-3">출간작가</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              ‘오늘, 남편이 퇴직했습니다’ 작가, OK지식나눔연구소 소장, 퇴직강사, 분노조절강사 등…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 6 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">작은콩</h4>
+            <p class="text-sm text-gray-500 !mt-3">일러스트레이터</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              희소병 환자로 살아가며, 느리지만 꾸준한 삶의 기록을 글과 그림으로 남깁니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
           </div>
         </div>
 
-        <!-- 카드 2 -->
-        <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
-          <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
-          <h4 class="text-base font-medium text-gray-900">케니스트리</h4>
-          <p class="text-sm text-gray-500 mb-3">에세이스트</p>
-          <p class="text-xs text-gray-400 leading-relaxed mb-4">
-            글 쓰는 마케터 입니다.
-          </p>
-          <div class="flex justify-center flex-wrap gap-2 text-sm">
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">문화</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">마케팅</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-400 rounded-full">···</span>
+        <!-- 카드 리스트 (해외여행 탭) -->
+        <div id="abroad" role="tabpanel" aria-labelledby="abroad-tab"
+          class="hidden max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
+          <!-- 카드 1 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">김고로</h4>
+            <p class="text-sm text-gray-500 !mt-3">미식 큐레이터</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              Taste Curator & Gourmet Lover of Gangneung. 인생은 순정이다. 식문화를 수집하며 사는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 2 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">케니스트리</h4>
+            <p class="text-sm text-gray-500 !mt-3">에세이스트</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              글 쓰는 마케터 입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 3 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 꽃돼지 후니</h4>
+            <p class="text-sm text-gray-500 !mt-3">핑거 CEO</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 4 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 태화강그대</h4>
+            <p class="text-sm text-gray-500 !mt-3">주부</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              2번의 암수술을 하고 제2의 인생을 울산에서 시작했습니다. 삶을 제대로 살아보려 애쓰는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 5 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">지식농부</h4>
+            <p class="text-sm text-gray-500 !mt-3">출간작가</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              ‘오늘, 남편이 퇴직했습니다’ 작가, OK지식나눔연구소 소장, 퇴직강사, 분노조절강사 등…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 6 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">작은콩</h4>
+            <p class="text-sm text-gray-500 !mt-3">일러스트레이터</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              희소병 환자로 살아가며, 느리지만 꾸준한 삶의 기록을 글과 그림으로 남깁니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
           </div>
         </div>
 
-        <!-- 카드 3 -->
-        <div class="bg-white !px-6 !py-8rounded-lg shadow-sm text-center">
-          <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
-          <h4 class="text-base font-medium text-gray-900">꽃돼지 후니</h4>
-          <p class="text-sm text-gray-500 mb-3">핑거 CEO</p>
-          <p class="text-xs text-gray-400 leading-relaxed mb-4">
-            꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…
-          </p>
-          <div class="flex justify-center flex-wrap gap-2 text-sm">
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">건강</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">여행</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-400 rounded-full">···</span>
+        <!-- 카드 리스트 (혼자여행 탭) -->
+        <div id="solo" role="tabpanel" aria-labelledby="solo-tab"
+          class="max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
+          <!-- 카드 1 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">김고로</h4>
+            <p class="text-sm text-gray-500 !mt-3">미식 큐레이터</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              Taste Curator & Gourmet Lover of Gangneung. 인생은 순정이다. 식문화를 수집하며 사는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 2 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">케니스트리</h4>
+            <p class="text-sm text-gray-500 !mt-3">에세이스트</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              글 쓰는 마케터 입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 3 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 꽃돼지 후니</h4>
+            <p class="text-sm text-gray-500 !mt-3">핑거 CEO</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 4 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 태화강그대</h4>
+            <p class="text-sm text-gray-500 !mt-3">주부</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              2번의 암수술을 하고 제2의 인생을 울산에서 시작했습니다. 삶을 제대로 살아보려 애쓰는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 5 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">지식농부</h4>
+            <p class="text-sm text-gray-500 !mt-3">출간작가</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              ‘오늘, 남편이 퇴직했습니다’ 작가, OK지식나눔연구소 소장, 퇴직강사, 분노조절강사 등…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 6 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">작은콩</h4>
+            <p class="text-sm text-gray-500 !mt-3">일러스트레이터</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              희소병 환자로 살아가며, 느리지만 꾸준한 삶의 기록을 글과 그림으로 남깁니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
           </div>
         </div>
 
-        <!-- 카드 4 -->
-        <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
-          <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
-          <h4 class="text-base font-medium text-gray-900">태화강그대</h4>
-          <p class="text-sm text-gray-500 mb-3">주부</p>
-          <p class="text-xs text-gray-400 leading-relaxed mb-4">
-            2번의 암수술을 하고 제2의 인생을 울산에서 시작했습니다. 삶을 제대로 살아보려 애쓰는 중입니다.
-          </p>
-          <div class="flex justify-center flex-wrap gap-2 text-sm">
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">건강</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">가족</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-400 rounded-full">···</span>
-          </div>
-        </div>
-
-        <!-- 카드 5 -->
-        <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
-          <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
-          <h4 class="text-base font-medium text-gray-900">지식농부</h4>
-          <p class="text-sm text-gray-500 mb-3">출간작가</p>
-          <p class="text-xs text-gray-400 leading-relaxed mb-4">
-            ‘오늘, 남편이 퇴직했습니다’ 작가, OK지식나눔연구소 소장, 퇴직강사, 분노조절강사 등…
-          </p>
-          <div class="flex justify-center flex-wrap gap-2 text-sm">
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">건강</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">교육</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-400 rounded-full">···</span>
-          </div>
-        </div>
-
-        <!-- 카드 6 -->
-        <div class="bg-white!px-6 !py-8 rounded-lg shadow-sm text-center">
-          <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
-          <h4 class="text-base font-medium text-gray-900">작은콩</h4>
-          <p class="text-sm text-gray-500 mb-3">일러스트레이터</p>
-          <p class="text-xs text-gray-400 leading-relaxed mb-4">
-            희소병 환자로 살아가며, 느리지만 꾸준한 삶의 기록을 글과 그림으로 남깁니다.
-          </p>
-          <div class="flex justify-center flex-wrap gap-2 text-sm">
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">건강</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">에세이</span>
-            <span class="px-2 py-0.5 bg-gray-100 text-gray-400 rounded-full">···</span>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -818,7 +1032,7 @@
 
               <!-- 카드 1 -->
               <div class="swiper-slide">
-                <div class="w-[280px] mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                <div class="w-[280px]  mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
                   <img src="https://via.placeholder.com/400x300" alt="기사 이미지 1" class="w-full h-48 object-cover" />
                   <div class="p-4">
                     <h3 class="text-base font-semibold text-gray-900">
@@ -1044,23 +1258,23 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 16,
-  loop: false,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    640: { slidesPerView: 2 },
-    768: { slidesPerView: 3 },
-    1024: { slidesPerView: 3 },
-  },
-});
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
+      1024: { slidesPerView: 3 },
+    },
+  });
 
 
 </script>
