@@ -173,7 +173,7 @@
 
   <main class="max-w-[960px]">
     <!-- 2) 슬라이더 섹션 -->
-    <section class="max-w-[960px] !mt-[115px] bg-gray-800">
+    <section class="max-w-[960px] !!mt-[15px] bg-gray-800">
       <div id="controls-carousel" class="relative w-full max-w-6xl mx-auto" data-carousel="static">
         <!-- Carousel wrapper → grid 컨테이너로 변경 -->
         <div
@@ -181,189 +181,81 @@
 
           <!-- Slide 1 -->
           <div data-carousel-item="active" class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
-            <!-- (1) 피처 이미지 -->
+            <!-- (1) 피처 이미지: col1, row1~2 -->
             <a href="https://brunch.co.kr/brunchbook/book44" class="relative row-span-2 col-span-1 bg-cover bg-center"
               style="background-image:url('https://img1.daumcdn.net/thumb/C460x648.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/gGsr/image/d5fxhJ7EC1-Sv7dRwUu8ewYhToU.jpg')">
               <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
                 <h2 class="text-xl font-bold">“낼래? 맞을래?”… “없다”</h2>
                 <p class="mt-2">한 명은 졌고 다른 한 명은 이겼다…</p>
               </div>
-              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-4 py-1">
+              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full !px-4 !py-4 ">
                 응원
               </span>
             </a>
-            <!-- (2) 화이트 카드 -->
-            <div class="col-start-2 row-start-1 bg-white p-6 flex flex-col justify-center items-center text-center">
+
+            <!-- (2) 화이트 카드: col2, row1 -->
+            <div class="col-start-2 row-start-1 bg-white !p-6 flex flex-col justify-center items-center text-center">
               <p class="text-lg">
                 주목받고 있는 <span class="text-teal-500 font-semibold">응원</span> 인기글을 소개합니다.
               </p>
-              <div class="mt-4 flex items-center space-x-2">
+              <div class="mt-4 flex items-center !space-x-2">
                 <img src="https://via.placeholder.com/32" alt="avatar" class="w-8 h-8 rounded-full">
                 <span class="text-gray-800 font-medium">Kirei</span>
               </div>
-              <p class="mt-2 text-gray-500">19. 인정과 무시</p>
+              <p class="!mt-2 text-gray-500">19. 인정과 무시</p>
             </div>
-            <!-- (3) 브런치북 카드 -->
+
+            <!-- (3) 브런치북 카드: col3, row1~2 -->
             <a href="https://brunch.co.kr/brunchbook/bookXX"
               class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
               <img src="https://via.placeholder.com/240x360" alt="브런치북 표지" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
+              <div class="absolute top-4 left-4 bg-white !p-4 rounded shadow">
                 <h3 class="text-base font-medium">디자이너의 인생 2막 그림에세이</h3>
-                <p class="text-sm text-gray-500 mt-1">신성현</p>
+                <p class="text-sm text-gray-500 !mt-1">신성현</p>
               </div>
             </a>
           </div>
 
-          <!-- Slide 2~5: Slide 1과 똑같은 3열×2행 구조로 복제 -->
+          <!-- Slide 2~5 도 동일한 구조로 복제 -->
           <div data-carousel-item class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
-            <!-- (1) -->
-            <a href="#" class="relative row-span-2 col-span-1 bg-cover bg-center"
-              style="background-image:url('https://via.placeholder.com/600x400')">
-              <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
-                <h2 class="text-xl font-bold">새로운 슬라이드 제목</h2>
-                <p class="mt-2">슬라이드 설명 텍스트…</p>
+            <!-- ...각 슬라이드별 이미지·텍스트·링크만 바꿔서 복사 -->
+            <a href="https://brunch.co.kr/brunchbook/book44" class="relative row-span-2 col-span-1 bg-cover bg-center"
+              style="background-image:url('https://img1.daumcdn.net/thumb/C460x648.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/gGsr/image/d5fxhJ7EC1-Sv7dRwUu8ewYhToU.jpg')">
+              <div class="absolute inset-0 bg-black/40 flex flex-col justify-end !p-6 text-white">
+                <h2 class="text-xl font-bold">“낼래? 맞을래?”… “없다”</h2>
+                <p class="!mt-2">한 명은 졌고 다른 한 명은 이겼다…</p>
               </div>
-              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-3 py-1">
-                태그
+              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full !px-3 !py-1">
+                응원123
               </span>
-            </a>
-            <!-- (2) -->
-            <div class="col-start-2 row-start-1 bg-white p-6 flex flex-col justify-center items-center text-center">
-              <p class="text-lg">
-                주목받고 있는 <span class="text-teal-500 font-semibold">태그</span> 인기글을 소개합니다.
-              </p>
-              <div class="mt-4 flex items-center space-x-2">
-                <img src="https://via.placeholder.com/32" alt="avatar" class="w-8 h-8 rounded-full">
-                <span class="text-gray-800 font-medium">작가명</span>
-              </div>
-              <p class="mt-2 text-gray-500">01. 소제목</p>
-            </div>
-            <!-- (3) -->
-            <a href="#" class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
-              <img src="https://via.placeholder.com/240x360" alt="북 표지" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
-                <h3 class="text-base font-medium">북 제목</h3>
-                <p class="text-sm text-gray-500 mt-1">저자명</p>
-              </div>
-            </a>
-          </div>
-          <!-- (위 block을 Slide 3,4,5용으로 3번 더 복제) -->
-
-          <div data-carousel-item class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
-            <!-- (1) -->
-            <a href="#" class="relative row-span-2 col-span-1 bg-cover bg-center"
-              style="background-image:url('https://via.placeholder.com/600x400')">
-              <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
-                <h2 class="text-xl font-bold">새로운 슬라이드 제목</h2>
-                <p class="mt-2">슬라이드 설명 텍스트…</p>
-              </div>
-              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-3 py-1">
-                태그
-              </span>
-            </a>
-            <!-- (2) -->
-            <div class="col-start-2 row-start-1 bg-white p-6 flex flex-col justify-center items-center text-center">
-              <p class="text-lg">
-                주목받고 있는 <span class="text-teal-500 font-semibold">태그</span> 인기글을 소개합니다.
-              </p>
-              <div class="mt-4 flex items-center space-x-2">
-                <img src="https://via.placeholder.com/32" alt="avatar" class="w-8 h-8 rounded-full">
-                <span class="text-gray-800 font-medium">작가명</span>
-              </div>
-              <p class="mt-2 text-gray-500">01. 소제목</p>
-            </div>
-            <!-- (3) -->
-            <a href="#" class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
-              <img src="https://via.placeholder.com/240x360" alt="북 표지" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
-                <h3 class="text-base font-medium">북 제목</h3>
-                <p class="text-sm text-gray-500 mt-1">저자명</p>
-              </div>
-            </a>
-          </div>
-
-          <div data-carousel-item class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
-            <!-- (1) -->
-            <a href="#" class="relative row-span-2 col-span-1 bg-cover bg-center"
-              style="background-image:url('https://via.placeholder.com/600x400')">
-              <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
-                <h2 class="text-xl font-bold">새로운 슬라이드 제목</h2>
-                <p class="mt-2">슬라이드 설명 텍스트…</p>
-              </div>
-              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-3 py-1">
-                태그
-              </span>
-            </a>
-            <!-- (2) -->
-            <div class="col-start-2 row-start-1 bg-white p-6 flex flex-col justify-center items-center text-center">
-              <p class="text-lg">
-                주목받고 있는 <span class="text-teal-500 font-semibold">태그</span> 인기글을 소개합니다.
-              </p>
-              <div class="mt-4 flex items-center space-x-2">
-                <img src="https://via.placeholder.com/32" alt="avatar" class="w-8 h-8 rounded-full">
-                <span class="text-gray-800 font-medium">작가명</span>
-              </div>
-              <p class="mt-2 text-gray-500">01. 소제목</p>
-            </div>
-            <!-- (3) -->
-            <a href="#" class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
-              <img src="https://via.placeholder.com/240x360" alt="북 표지" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
-                <h3 class="text-base font-medium">북 제목</h3>
-                <p class="text-sm text-gray-500 mt-1">저자명</p>
-              </div>
-            </a>
-          </div>
-
-          <div data-carousel-item class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
-            <!-- (1) -->
-            <a href="#" class="relative row-span-2 col-span-1 bg-cover bg-center"
-              style="background-image:url('https://via.placeholder.com/600x400')">
-              <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
-                <h2 class="text-xl font-bold">새로운 슬라이드 제목</h2>
-                <p class="mt-2">슬라이드 설명 텍스트…</p>
-              </div>
-              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-3 py-1">
-                태그
-              </span>
-            </a>
-            <!-- (2) -->
-            <div class="col-start-2 row-start-1 bg-white p-6 flex flex-col justify-center items-center text-center">
-              <p class="text-lg">
-                주목받고 있는 <span class="text-teal-500 font-semibold">태그</span> 인기글을 소개합니다.
-              </p>
-              <div class="mt-4 flex items-center space-x-2">
-                <img src="https://via.placeholder.com/32" alt="avatar" class="w-8 h-8 rounded-full">
-                <span class="text-gray-800 font-medium">작가명</span>
-              </div>
-              <p class="mt-2 text-gray-500">01. 소제목</p>
-            </div>
-            <!-- (3) -->
-            <a href="#" class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
-              <img src="https://via.placeholder.com/240x360" alt="북 표지" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
-                <h3 class="text-base font-medium">북 제목</h3>
-                <p class="text-sm text-gray-500 mt-1">저자명</p>
-              </div>
             </a>
           </div>
 
         </div>
 
-        <!-- Prev/Next 화살표 -->
-        <button type="button" data-carousel-prev class="absolute top-1/2 left-0 transform -translate-y-1/2 z-30">
-          <svg class="w-12 h-12 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        <!-- Slider controls (이전/다음) -->
+        <button type="button" data-carousel-prev class="absolute top-0 left-0 z-30 ...">
+          <!-- 이전 화살표 -->
+          <svg class="w-6 h-6 text-gray-800 dark:text-white cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m15 19-7-7 7-7" />
           </svg>
+
         </button>
-        <button type="button" data-carousel-next class="absolute top-1/2 right-0 transform -translate-y-1/2 z-30">
-          <svg class="w-12 h-12 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+
+        <button type="button" data-carousel-next class="absolute top-0 right-0 z-30 ...">
+          <!-- 다음 화살표 -->
+          <svg class="w-6 h-6 text-gray-800 dark:text-white cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m9 5 7 7-7 7" />
           </svg>
+
         </button>
 
         <!-- Pagination -->
-        <div id="carousel-pagination" class="flex justify-center mt-6 space-x-2">
+        <div id="carousel-pagination" class="flex justify-center !mt-6 space-x-2">
           <button data-carousel-slide-to="0" class="text-gray-900 font-bold underline cursor-pointer">01</button>
           <button data-carousel-slide-to="1" class="text-gray-300 cursor-pointer">02</button>
           <button data-carousel-slide-to="2" class="text-gray-300 cursor-pointer">03</button>
@@ -1266,21 +1158,25 @@
 <script>
 
 
+  // Flowbite Carousel 초기화 , 첫번째 슬라이드 섹션
   document.addEventListener('DOMContentLoaded', () => {
+    // 1) DOM 요소 가져오기
     const carouselEl = document.getElementById('controls-carousel');
-    const carouselInstance = new Carousel(carouselEl, { interval: false });
+    // 2) Flowbite Carousel 인스턴스 생성
+    const carouselInstance = new Carousel(carouselEl, {
+      interval: false  // 자동 재생 끄기
+    });
 
-    // 오직 이 슬라이더 내부에서만 페이징 버튼을 찾습니다.
-    const pageBtns = Array.from(
-      carouselEl.querySelectorAll('#carousel-pagination [data-carousel-slide-to]')
-    );
+    // 3) 슬라이드 요소와 페이지 버튼, prev/next 버튼 가져오기
     const slides = Array.from(carouselEl.querySelectorAll('[data-carousel-item]'));
+    const pageBtns = Array.from(carouselEl.querySelectorAll('#carousel-pagination [data-carousel-slide-to]'));
     const prevBtn = carouselEl.querySelector('[data-carousel-prev]');
     const nextBtn = carouselEl.querySelector('[data-carousel-next]');
 
+    // 4) 페이지 버튼 클릭 시 해당 인덱스로 이동
     pageBtns.forEach((btn, idx) => {
       btn.addEventListener('click', () => {
-        // 버튼 스타일 토글
+        // 버튼 상태 토글
         pageBtns.forEach(b => {
           b.classList.remove('text-gray-900', 'font-bold', 'underline');
           b.classList.add('text-gray-300');
@@ -1288,12 +1184,12 @@
         btn.classList.remove('text-gray-300');
         btn.classList.add('text-gray-900', 'font-bold', 'underline');
 
-        // 해당 슬라이드로 이동
+        // Flowbite API 호출
         carouselInstance.slideTo(idx);
       });
     });
 
-    // Prev/Next 눌렀을 때도 페이지네이션 업데이트
+    // 5) prev/next 클릭 시, pagination 상태 동기화
     const updatePagination = () => {
       const activeIdx = slides.findIndex(sl => !sl.classList.contains('hidden'));
       pageBtns.forEach((b, i) => {
@@ -1306,9 +1202,10 @@
     prevBtn.addEventListener('click', updatePagination);
     nextBtn.addEventListener('click', updatePagination);
 
-    // 초기 페이징 반영
+    // 6) 초기 상태 반영
     updatePagination();
   });
+
 
 
 

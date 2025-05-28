@@ -176,8 +176,7 @@
     <section class="max-w-[960px] !mt-[115px] bg-gray-800">
       <div id="controls-carousel" class="relative w-full max-w-6xl mx-auto" data-carousel="static">
         <!-- Carousel wrapper → grid 컨테이너로 변경 -->
-        <div
-          class="relative h-[500px] overflow-hidden rounded-lg bg-white grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
+        <div class="relative h-[500px] overflow-hidden rounded-lg bg-white grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
 
           <!-- Slide 1 -->
           <div data-carousel-item="active" class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
@@ -1266,7 +1265,7 @@
 <script>
 
 
-  document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     const carouselEl = document.getElementById('controls-carousel');
     const carouselInstance = new Carousel(carouselEl, { interval: false });
 
@@ -1274,7 +1273,7 @@
     const pageBtns = Array.from(
       carouselEl.querySelectorAll('#carousel-pagination [data-carousel-slide-to]')
     );
-    const slides = Array.from(carouselEl.querySelectorAll('[data-carousel-item]'));
+    const slides  = Array.from(carouselEl.querySelectorAll('[data-carousel-item]'));
     const prevBtn = carouselEl.querySelector('[data-carousel-prev]');
     const nextBtn = carouselEl.querySelector('[data-carousel-next]');
 
@@ -1282,11 +1281,11 @@
       btn.addEventListener('click', () => {
         // 버튼 스타일 토글
         pageBtns.forEach(b => {
-          b.classList.remove('text-gray-900', 'font-bold', 'underline');
+          b.classList.remove('text-gray-900','font-bold','underline');
           b.classList.add('text-gray-300');
         });
         btn.classList.remove('text-gray-300');
-        btn.classList.add('text-gray-900', 'font-bold', 'underline');
+        btn.classList.add('text-gray-900','font-bold','underline');
 
         // 해당 슬라이드로 이동
         carouselInstance.slideTo(idx);
@@ -1297,10 +1296,10 @@
     const updatePagination = () => {
       const activeIdx = slides.findIndex(sl => !sl.classList.contains('hidden'));
       pageBtns.forEach((b, i) => {
-        b.classList.toggle('text-gray-900', i === activeIdx);
-        b.classList.toggle('font-bold', i === activeIdx);
-        b.classList.toggle('underline', i === activeIdx);
-        b.classList.toggle('text-gray-300', i !== activeIdx);
+        b.classList.toggle('text-gray-900',   i === activeIdx);
+        b.classList.toggle('font-bold',       i === activeIdx);
+        b.classList.toggle('underline',       i === activeIdx);
+        b.classList.toggle('text-gray-300',  i !== activeIdx);
       });
     };
     prevBtn.addEventListener('click', updatePagination);

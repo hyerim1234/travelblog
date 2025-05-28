@@ -173,205 +173,144 @@
 
   <main class="max-w-[960px]">
     <!-- 2) 슬라이더 섹션 -->
-    <section class="max-w-[960px] !mt-[115px] bg-gray-800">
-      <div id="controls-carousel" class="relative w-full max-w-6xl mx-auto" data-carousel="static">
-        <!-- Carousel wrapper → grid 컨테이너로 변경 -->
-        <div
-          class="relative h-[500px] overflow-hidden rounded-lg bg-white grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
+    <section class="max-w-[960px] mt-4 bg-gray-800">
+  <div id="controls-carousel" class="relative w-full max-w-6xl mx-auto" data-carousel="static">
+    <!-- 1) 슬라이드 컨테이너 -->
+    <div class="relative h-[500px] overflow-hidden rounded-lg bg-white">
 
-          <!-- Slide 1 -->
-          <div data-carousel-item="active" class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
-            <!-- (1) 피처 이미지 -->
-            <a href="https://brunch.co.kr/brunchbook/book44" class="relative row-span-2 col-span-1 bg-cover bg-center"
-              style="background-image:url('https://img1.daumcdn.net/thumb/C460x648.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/gGsr/image/d5fxhJ7EC1-Sv7dRwUu8ewYhToU.jpg')">
-              <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
-                <h2 class="text-xl font-bold">“낼래? 맞을래?”… “없다”</h2>
-                <p class="mt-2">한 명은 졌고 다른 한 명은 이겼다…</p>
-              </div>
-              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-4 py-1">
-                응원
-              </span>
-            </a>
-            <!-- (2) 화이트 카드 -->
-            <div class="col-start-2 row-start-1 bg-white p-6 flex flex-col justify-center items-center text-center">
-              <p class="text-lg">
-                주목받고 있는 <span class="text-teal-500 font-semibold">응원</span> 인기글을 소개합니다.
-              </p>
-              <div class="mt-4 flex items-center space-x-2">
-                <img src="https://via.placeholder.com/32" alt="avatar" class="w-8 h-8 rounded-full">
-                <span class="text-gray-800 font-medium">Kirei</span>
-              </div>
-              <p class="mt-2 text-gray-500">19. 인정과 무시</p>
-            </div>
-            <!-- (3) 브런치북 카드 -->
-            <a href="https://brunch.co.kr/brunchbook/bookXX"
-              class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
-              <img src="https://via.placeholder.com/240x360" alt="브런치북 표지" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
-                <h3 class="text-base font-medium">디자이너의 인생 2막 그림에세이</h3>
-                <p class="text-sm text-gray-500 mt-1">신성현</p>
-              </div>
-            </a>
+      <!-- Slide 1: 처음 보이는 슬라이드 -->
+      <div data-carousel-item
+           class="duration-700 ease-in-out grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
+        <!-- top-left -->
+        <a href="#"
+           class="relative row-span-2 col-span-1 bg-cover bg-center"
+           style="background-image:url('https://via.placeholder.com/600x500')">
+          <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
+            <h2 class="text-xl font-bold">슬라이드 1 타이틀</h2>
+            <p class="mt-2">설명 텍스트…</p>
           </div>
-
-          <!-- Slide 2~5: Slide 1과 똑같은 3열×2행 구조로 복제 -->
-          <div data-carousel-item class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
-            <!-- (1) -->
-            <a href="#" class="relative row-span-2 col-span-1 bg-cover bg-center"
-              style="background-image:url('https://via.placeholder.com/600x400')">
-              <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
-                <h2 class="text-xl font-bold">새로운 슬라이드 제목</h2>
-                <p class="mt-2">슬라이드 설명 텍스트…</p>
-              </div>
-              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-3 py-1">
-                태그
-              </span>
-            </a>
-            <!-- (2) -->
-            <div class="col-start-2 row-start-1 bg-white p-6 flex flex-col justify-center items-center text-center">
-              <p class="text-lg">
-                주목받고 있는 <span class="text-teal-500 font-semibold">태그</span> 인기글을 소개합니다.
-              </p>
-              <div class="mt-4 flex items-center space-x-2">
-                <img src="https://via.placeholder.com/32" alt="avatar" class="w-8 h-8 rounded-full">
-                <span class="text-gray-800 font-medium">작가명</span>
-              </div>
-              <p class="mt-2 text-gray-500">01. 소제목</p>
-            </div>
-            <!-- (3) -->
-            <a href="#" class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
-              <img src="https://via.placeholder.com/240x360" alt="북 표지" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
-                <h3 class="text-base font-medium">북 제목</h3>
-                <p class="text-sm text-gray-500 mt-1">저자명</p>
-              </div>
-            </a>
+          <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-4 py-1">
+            태그
+          </span>
+        </a>
+        <!-- top-center -->
+        <div class="bg-white p-6 flex flex-col items-center text-center">
+          <p class="text-lg">주목받는 <span class="text-teal-500 font-semibold">태그</span></p>
+          <div class="mt-4 flex items-center space-x-2">
+            <img src="https://via.placeholder.com/32" class="w-8 h-8 rounded-full">
+            <span class="font-medium">작가명</span>
           </div>
-          <!-- (위 block을 Slide 3,4,5용으로 3번 더 복제) -->
-
-          <div data-carousel-item class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
-            <!-- (1) -->
-            <a href="#" class="relative row-span-2 col-span-1 bg-cover bg-center"
-              style="background-image:url('https://via.placeholder.com/600x400')">
-              <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
-                <h2 class="text-xl font-bold">새로운 슬라이드 제목</h2>
-                <p class="mt-2">슬라이드 설명 텍스트…</p>
-              </div>
-              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-3 py-1">
-                태그
-              </span>
-            </a>
-            <!-- (2) -->
-            <div class="col-start-2 row-start-1 bg-white p-6 flex flex-col justify-center items-center text-center">
-              <p class="text-lg">
-                주목받고 있는 <span class="text-teal-500 font-semibold">태그</span> 인기글을 소개합니다.
-              </p>
-              <div class="mt-4 flex items-center space-x-2">
-                <img src="https://via.placeholder.com/32" alt="avatar" class="w-8 h-8 rounded-full">
-                <span class="text-gray-800 font-medium">작가명</span>
-              </div>
-              <p class="mt-2 text-gray-500">01. 소제목</p>
-            </div>
-            <!-- (3) -->
-            <a href="#" class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
-              <img src="https://via.placeholder.com/240x360" alt="북 표지" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
-                <h3 class="text-base font-medium">북 제목</h3>
-                <p class="text-sm text-gray-500 mt-1">저자명</p>
-              </div>
-            </a>
-          </div>
-
-          <div data-carousel-item class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
-            <!-- (1) -->
-            <a href="#" class="relative row-span-2 col-span-1 bg-cover bg-center"
-              style="background-image:url('https://via.placeholder.com/600x400')">
-              <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
-                <h2 class="text-xl font-bold">새로운 슬라이드 제목</h2>
-                <p class="mt-2">슬라이드 설명 텍스트…</p>
-              </div>
-              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-3 py-1">
-                태그
-              </span>
-            </a>
-            <!-- (2) -->
-            <div class="col-start-2 row-start-1 bg-white p-6 flex flex-col justify-center items-center text-center">
-              <p class="text-lg">
-                주목받고 있는 <span class="text-teal-500 font-semibold">태그</span> 인기글을 소개합니다.
-              </p>
-              <div class="mt-4 flex items-center space-x-2">
-                <img src="https://via.placeholder.com/32" alt="avatar" class="w-8 h-8 rounded-full">
-                <span class="text-gray-800 font-medium">작가명</span>
-              </div>
-              <p class="mt-2 text-gray-500">01. 소제목</p>
-            </div>
-            <!-- (3) -->
-            <a href="#" class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
-              <img src="https://via.placeholder.com/240x360" alt="북 표지" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
-                <h3 class="text-base font-medium">북 제목</h3>
-                <p class="text-sm text-gray-500 mt-1">저자명</p>
-              </div>
-            </a>
-          </div>
-
-          <div data-carousel-item class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
-            <!-- (1) -->
-            <a href="#" class="relative row-span-2 col-span-1 bg-cover bg-center"
-              style="background-image:url('https://via.placeholder.com/600x400')">
-              <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
-                <h2 class="text-xl font-bold">새로운 슬라이드 제목</h2>
-                <p class="mt-2">슬라이드 설명 텍스트…</p>
-              </div>
-              <span class="absolute bottom-4 left-4 bg-teal-500 text-white text-xs rounded-full px-3 py-1">
-                태그
-              </span>
-            </a>
-            <!-- (2) -->
-            <div class="col-start-2 row-start-1 bg-white p-6 flex flex-col justify-center items-center text-center">
-              <p class="text-lg">
-                주목받고 있는 <span class="text-teal-500 font-semibold">태그</span> 인기글을 소개합니다.
-              </p>
-              <div class="mt-4 flex items-center space-x-2">
-                <img src="https://via.placeholder.com/32" alt="avatar" class="w-8 h-8 rounded-full">
-                <span class="text-gray-800 font-medium">작가명</span>
-              </div>
-              <p class="mt-2 text-gray-500">01. 소제목</p>
-            </div>
-            <!-- (3) -->
-            <a href="#" class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
-              <img src="https://via.placeholder.com/240x360" alt="북 표지" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
-                <h3 class="text-base font-medium">북 제목</h3>
-                <p class="text-sm text-gray-500 mt-1">저자명</p>
-              </div>
-            </a>
-          </div>
-
+          <p class="mt-2 text-gray-500">01. 소제목</p>
         </div>
-
-        <!-- Prev/Next 화살표 -->
-        <button type="button" data-carousel-prev class="absolute top-1/2 left-0 transform -translate-y-1/2 z-30">
-          <svg class="w-12 h-12 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button type="button" data-carousel-next class="absolute top-1/2 right-0 transform -translate-y-1/2 z-30">
-          <svg class="w-12 h-12 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
-        <!-- Pagination -->
-        <div id="carousel-pagination" class="flex justify-center mt-6 space-x-2">
-          <button data-carousel-slide-to="0" class="text-gray-900 font-bold underline cursor-pointer">01</button>
-          <button data-carousel-slide-to="1" class="text-gray-300 cursor-pointer">02</button>
-          <button data-carousel-slide-to="2" class="text-gray-300 cursor-pointer">03</button>
-          <button data-carousel-slide-to="3" class="text-gray-300 cursor-pointer">04</button>
-          <button data-carousel-slide-to="4" class="text-gray-300 cursor-pointer">05</button>
-        </div>
+        <!-- top-right -->
+        <a href="#"
+           class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
+          <img src="https://via.placeholder.com/240x360" class="w-full h-full object-cover">
+          <div class="absolute top-4 left-4 bg-white p-4 rounded shadow">
+            <h3 class="font-medium">북 제목</h3>
+            <p class="text-sm text-gray-500 mt-1">저자명</p>
+          </div>
+        </a>
+        <!-- bottom-left -->
+        <a href="#"
+           class="relative bg-cover bg-center"
+           style="background-image:url('https://via.placeholder.com/600x300')">
+          <div class="absolute inset-0 bg-black/40 flex items-end p-4 text-white">
+            <span class="text-sm">일러스트/그림</span>
+          </div>
+        </a>
+        <!-- bottom-center -->
+        <a href="#"
+           class="relative bg-cover bg-center"
+           style="background-image:url('https://via.placeholder.com/400x300')">
+          <div class="absolute inset-0 bg-black/40 flex items-end p-4 text-white">
+            <span class="text-sm">기사 1 제목</span>
+          </div>
+        </a>
+        <!-- bottom-right -->
+        <a href="#"
+           class="relative bg-cover bg-center"
+           style="background-image:url('https://via.placeholder.com/400x300')">
+          <div class="absolute inset-0 bg-black/40 flex items-end p-4 text-white">
+            <span class="text-sm">기사 2 제목</span>
+          </div>
+        </a>
       </div>
-    </section>
+
+      <!-- Slide 2: 처음엔 hidden -->
+      <div data-carousel-item
+           class="hidden duration-700 ease-in-out grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
+        <!-- top-left -->
+        <a href="#"
+           class="relative row-span-2 col-span-1 bg-cover bg-center"
+           style="background-image:url('https://via.placeholder.com/600x500?text=Slide+2+TL')">
+          <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 text-white">
+            <h2 class="text-xl font-bold">슬라이드 2 타이틀</h2>
+          </div>
+        </a>
+        <!-- top-center -->
+        <div class="bg-white p-6 flex flex-col items-center text-center">
+          <p class="text-lg">주목받는 <span class="text-teal-500 font-semibold">태그2</span></p>
+        </div>
+        <!-- top-right -->
+        <a href="#"
+           class="relative row-span-2 col-start-3 bg-gray-100 rounded-lg overflow-hidden">
+          <img src="https://via.placeholder.com/240x360?text=Book+2" class="w-full h-full object-cover">
+        </a>
+        <!-- bottom-left -->
+        <a href="#"
+           class="relative bg-cover bg-center"
+           style="background-image:url('https://via.placeholder.com/600x300?text=Slide+2+BL')">
+          <div class="absolute inset-0 bg-black/40 flex items-end p-4 text-white">
+            <span>일러스트2</span>
+          </div>
+        </a>
+        <!-- bottom-center -->
+        <a href="#"
+           class="relative bg-cover bg-center"
+           style="background-image:url('https://via.placeholder.com/400x300?text=Article+2-1')">
+          <div class="absolute inset-0 bg-black/40 flex items-end p-4 text-white">
+            <span>기사2-1 제목</span>
+          </div>
+        </a>
+        <!-- bottom-right -->
+        <a href="#"
+           class="relative bg-cover bg-center"
+           style="background-image:url('https://via.placeholder.com/400x300?text=Article+2-2')">
+          <div class="absolute inset-0 bg-black/40 flex items-end p-4 text-white">
+            <span>기사2-2 제목</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- (위 구조를 slide 3~5 총 5개로 복제) -->
+
+    </div><!--/.relative-->
+
+    <!-- Prev/Next -->
+    <button data-carousel-prev
+            class="absolute top-1/2 left-0 transform -translate-y-1/2 z-30">
+      <svg class="w-12 h-12 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+    </button>
+    <button data-carousel-next
+            class="absolute top-1/2 right-0 transform -translate-y-1/2 z-30">
+      <svg class="w-12 h-12 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </button>
+
+    <!-- Pagination -->
+    <div id="carousel-pagination" class="flex justify-center mt-6 space-x-2">
+      <button data-carousel-slide-to="0" class="text-gray-900 font-bold underline">01</button>
+      <button data-carousel-slide-to="1" class="text-gray-300">02</button>
+      <button data-carousel-slide-to="2" class="text-gray-300">03</button>
+      <button data-carousel-slide-to="3" class="text-gray-300">04</button>
+      <button data-carousel-slide-to="4" class="text-gray-300">05</button>
+    </div>
+  </div>
+</section>
 
 
 

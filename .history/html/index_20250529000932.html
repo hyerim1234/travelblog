@@ -173,11 +173,10 @@
 
   <main class="max-w-[960px]">
     <!-- 2) 슬라이더 섹션 -->
-    <section class="max-w-[960px] !mt-[115px] bg-gray-800">
+    <section class="max-w-[960px] mt-[15px] bg-gray-800">
       <div id="controls-carousel" class="relative w-full max-w-6xl mx-auto" data-carousel="static">
         <!-- Carousel wrapper → grid 컨테이너로 변경 -->
-        <div
-          class="relative h-[500px] overflow-hidden rounded-lg bg-white grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
+        <div class="relative h-[500px] overflow-hidden rounded-lg bg-white grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
 
           <!-- Slide 1 -->
           <div data-carousel-item="active" class="grid grid-cols-[2fr,1fr,1fr] grid-rows-2 gap-4">
@@ -1266,21 +1265,25 @@
 <script>
 
 
+  // Flowbite Carousel 초기화 , 첫번째 슬라이드 섹션
   document.addEventListener('DOMContentLoaded', () => {
+    // 1) DOM 요소 가져오기
     const carouselEl = document.getElementById('controls-carousel');
-    const carouselInstance = new Carousel(carouselEl, { interval: false });
+    // 2) Flowbite Carousel 인스턴스 생성
+    const carouselInstance = new Carousel(carouselEl, {
+      interval: false  // 자동 재생 끄기
+    });
 
-    // 오직 이 슬라이더 내부에서만 페이징 버튼을 찾습니다.
-    const pageBtns = Array.from(
-      carouselEl.querySelectorAll('#carousel-pagination [data-carousel-slide-to]')
-    );
+    // 3) 슬라이드 요소와 페이지 버튼, prev/next 버튼 가져오기
     const slides = Array.from(carouselEl.querySelectorAll('[data-carousel-item]'));
+    const pageBtns = Array.from(carouselEl.querySelectorAll('#carousel-pagination [data-carousel-slide-to]'));
     const prevBtn = carouselEl.querySelector('[data-carousel-prev]');
     const nextBtn = carouselEl.querySelector('[data-carousel-next]');
 
+    // 4) 페이지 버튼 클릭 시 해당 인덱스로 이동
     pageBtns.forEach((btn, idx) => {
       btn.addEventListener('click', () => {
-        // 버튼 스타일 토글
+        // 버튼 상태 토글
         pageBtns.forEach(b => {
           b.classList.remove('text-gray-900', 'font-bold', 'underline');
           b.classList.add('text-gray-300');
@@ -1288,12 +1291,12 @@
         btn.classList.remove('text-gray-300');
         btn.classList.add('text-gray-900', 'font-bold', 'underline');
 
-        // 해당 슬라이드로 이동
+        // Flowbite API 호출
         carouselInstance.slideTo(idx);
       });
     });
 
-    // Prev/Next 눌렀을 때도 페이지네이션 업데이트
+    // 5) prev/next 클릭 시, pagination 상태 동기화
     const updatePagination = () => {
       const activeIdx = slides.findIndex(sl => !sl.classList.contains('hidden'));
       pageBtns.forEach((b, i) => {
@@ -1306,9 +1309,10 @@
     prevBtn.addEventListener('click', updatePagination);
     nextBtn.addEventListener('click', updatePagination);
 
-    // 초기 페이징 반영
+    // 6) 초기 상태 반영
     updatePagination();
   });
+
 
 
 
