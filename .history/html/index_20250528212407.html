@@ -401,21 +401,22 @@
       <h3 class="text-center font-light text-2xl !mb-12">요일별 연재</h3>
 
       <!-- 요일 탭 -->
-      <div class="!mb-6 text-center">
-        <ul class="flex justify-center text-sm font-medium text-gray-500 border-b border-gray-200 " data-tabs-toggle="#day-tab-content" role="tablist">
-          <li><button class="!px-4 !py-2 border-b-2  rounded-t-lg cursor-pointer" id="mon-tab" data-tabs-target="#mon"
+      <div class="mb-6 text-center">
+        <ul class="flex justify-center text-sm font-medium text-gray-500 border-b border-gray-200 "
+          data-tabs-toggle="#day-tab-content" role="tablist">
+          <li><button class="!px-4 py-2 border-b-2  rounded-t-lg cursor-pointer" id="mon-tab" data-tabs-target="#mon"
               type="button" role="tab">월</button></li>
-          <li><button class="!px-4 !py-2  border-b-2  rounded-t-lg cursor-pointer" id="tue-tab" data-tabs-target="#tue"
+          <li><button class="px-4 py-2 border-b-2  rounded-t-lg cursor-pointer" id="tue-tab" data-tabs-target="#tue"
               type="button" role="tab">화</button></li>
-          <li><button class="!px-4 !py-2  border-b-2  rounded-t-lg text-blue-600 border-blue-600 active cursor-pointer"
+          <li><button class="px-4 py-2 border-b-2  rounded-t-lg text-blue-600 border-blue-600 active cursor-pointer"
               id="wed-tab" data-tabs-target="#wed" type="button" role="tab">수</button></li>
-          <li><button class="!px-4 !py-2  border-b-2 r ounded-t-lg cursor-pointer" id="thu-tab" data-tabs-target="#thu"
+          <li><button class="px-4 py-2 border-b-2 r ounded-t-lg cursor-pointer" id="thu-tab" data-tabs-target="#thu"
               type="button" role="tab">목</button></li>
-          <li><button class="!px-4 !py-2  border-b-2  rounded-t-lg cursor-pointer" id="fri-tab" data-tabs-target="#fri"
+          <li><button class="px-4 py-2 border-b-2  rounded-t-lg cursor-pointer" id="fri-tab" data-tabs-target="#fri"
               type="button" role="tab">금</button></li>
-          <li><button class="!px-4 !py-2  border-b-2  rounded-t-lg cursor-pointer" id="sat-tab" data-tabs-target="#sat"
+          <li><button class="px-4 py-2 border-b-2  rounded-t-lg cursor-pointer" id="sat-tab" data-tabs-target="#sat"
               type="button" role="tab">토</button></li>
-          <li><button class="!px-4 !py-2  border-b-2  rounded-t-lg cursor-pointer" id="sun-tab" data-tabs-target="#sun"
+          <li><button class="px-4 py-2 border-b-2  rounded-t-lg cursor-pointer" id="sun-tab" data-tabs-target="#sun"
               type="button" role="tab">일</button></li>
         </ul>
       </div>
@@ -431,9 +432,8 @@
 
       <!-- 콘텐츠 -->
       <div id="day-tab-content" class="h-full sm:h-full h-[680px] !space-y-8 !px-4 !py-4">
-        
         <!-- 수요일 콘텐츠 (기본 활성) -->
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-3" id="wed" role="tabpanel" aria-labelledby="wed-tab">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="wed" role="tabpanel" aria-labelledby="wed-tab">
           <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-96 md:w-[400px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">감성 한 스푼</p>
@@ -454,32 +454,9 @@
         </div>
 
         <!-- 월요일 콘텐츠 -->
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2  gap-3" id="mon" role="tabpanel" aria-labelledby="mon-tab">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="mon" role="tabpanel" aria-labelledby="mon-tab">
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
-            <div class="flex-1">
-              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
-              <p class="font-medium text-gray-800">나는, 비둘기</p>
-              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
-            </div>
-
-            <div class="">
-              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
-            </div>
-          </div>
-
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
-            <div class="flex-1">
-              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
-              <p class="font-medium text-gray-800">나는, 비둘기2</p>
-              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
-            </div>
-            <div class="">
-              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
-            </div>
-          </div>
-
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -491,7 +468,18 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -503,7 +491,7 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -515,7 +503,7 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -527,7 +515,7 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -539,7 +527,7 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -551,7 +539,7 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -563,7 +551,7 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -575,7 +563,7 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -587,7 +575,19 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -603,8 +603,8 @@
         </div>
 
         <!-- 화요일 콘텐츠 -->
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-3" id="tue" role="tabpanel" aria-labelledby="tue-tab">
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="tue" role="tabpanel" aria-labelledby="tue-tab">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -616,7 +616,7 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -627,7 +627,7 @@
             </div>
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
@@ -639,7 +639,7 @@
 
           </div>
 
-          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full md:w-[430px] h-26 ">
             <div class="flex-1">
               <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
               <p class="font-medium text-gray-800">나는, 비둘기</p>
