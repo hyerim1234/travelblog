@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여행블로그_250516</title>
+
+  <link rel="preload" as="font"
+    href="https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff"
+    type="font/woff" crossorigin>
+
+  <!-- 1) Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/index.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+
+
+</head>
+
+<body>
+  <!-- 1) 이벤트 배너 -->
+  <div id="event-banner" class="text-sm sm:text-base xs:text-sm">
+    <h1 class="!text-sm sm:text-base xs:text-sm">
+      대상 국무총리상 시상
+      <span>2025 나만의 여행 이야기 공모전</span>
+      2025.4.23 – 6.15
+    </h1>
+  </div>
+
+
+  <!-- 주 네비게이션 메뉴 -->
+  <!-- 드로어 오픈 버튼 -->
+  <nav class="border-gray-200 bg-gray-50 ">
+    <div class="flex items-center  p-4 w-full">
+      <button data-drawer-target="sidebar-menu" data-drawer-show="sidebar-menu" aria-controls="sidebar-menu"
+        type="button"
+        class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 cursor-pointer">
+        <span class="sr-only">Open sidebar menu</span>
+        <svg class="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <a href="#" class="flex items-center space-x-3">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- 드로어 메뉴 -->
+  <!-- Drawer Sidebar -->
+  <div id="sidebar-menu"
+    class="fixed top-0 left-0 z-40 w-72 h-screen overflow-y-auto transition-transform -translate-x-full bg-white  border-gray-200 flex flex-col justify-between"
+    tabindex="-1" aria-labelledby="drawer-label">
+
+    <!-- 위쪽 콘텐츠 -->
+    <div class="w-full h-full">
+      <!-- 닫기 버튼 -->
+      <button type="button" data-drawer-hide="sidebar-menu" aria-controls="sidebar-menu"
+        class="absolute top-3 right-3 text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 
+          8.586l4.293-4.293a1 1 0 011.414 1.414L11.414 
+          10l4.293 4.293a1 1 0 01-1.414 1.414L10 
+          11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 
+          10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <!-- 프로필, 메뉴 등 상단 콘텐츠 -->
+      <div class="flex flex-col items-center !p-6 w-full border border-gray-200" style="background-color: #f6f6f6;">
+
+        <div class="w-20 h-20 rounded-full bg-gradient-to-t from-pink-400 to-pink-500 mb-1 bg-blue-200"></div>
+
+        <div class="text-center !my-4">
+          <p class="font-semibold text-lg">ㅎㅎㅎ</p>
+          <p class="text-sm text-gray-400 mt-0.5 break-all italic font-light" id="my_link">brunch.co.kr/@08f4a6f4b492453
+          </p>
+        </div>
+
+        <div class="flex gap-2 ">
+          <button
+            class="w-16 h-8 px-3 py-0.5 text-[13px] bg-white border border-teal-400 text-teal-500 font-light rounded-full">글쓰기</button>
+          <button
+            class="w-16 h-8 px-3 py-0.5 text-[13px] bg-white border border-teal-400 text-teal-500 font-light rounded-full">작가
+            신청</button>
+        </div>
+
+      </div>
+
+
+      <div class="text-center font-light text-gray-400 sidebar_middle" style="height: 252px; padding-top: 28px;">
+        <ul>
+          <li class="h-[34px]">내 브런치스토리</li>
+          <li class="h-[34px]">작가의 서랍</li>
+          <li class="text-teal-500 h-[34px]">ㅡ 브런치스토리 홈 ㅡ</li>
+          <li class="h-[34px]">브런치스토리 나우</li>
+          <li class="h-[34px]">브런치스토리 책방</li>
+          <li class="h-[34px]">글 읽는 서재</li>
+          <li class="h-[34px]">피드</li>
+        </ul>
+
+
+
+      </div>
+
+      <div class="font-[Chosunilbo_myungjo] w-36 space-y-4 text-[15px]  !mt-24 font-light text-gray-800 ">
+        <p>작가-지원</p>
+        <p>프로젝트 보러가기</p>
+        <hr class="my-2 border-gray-800">
+      </div>
+
+    </div>
+
+    <!-- 하단 버튼 (고정) -->
+    <div class="">
+      <div class="flex justify-center gap-4" style="margin-bottom: 30px;">
+        <button class="w-10 px-8 py-0.5 text-sm border border-gray-400 text-gray-600 rounded-full">설정</button>
+        <button class="w-16 px-4 py-0.5 text-sm border border-gray-400 text-gray-600 rounded-full">로그아웃</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="!pt-12 !px-4">
+    <div class="max-w-4xl !mx-auto 
+              font-[nanummyeongjo] 
+              text-base sm:text-lg md:text-xl lg:text-2xl 
+              leading-snug sm:leading-normal md:leading-relaxed lg:leading-[46px]">
+
+      <!-- 제목 -->
+      <h3 class="text-[#1a1a1a] 
+               text-2xl sm:text-3xl md:text-4xl lg:text-[32px] 
+               font-normal 
+               tracking-wide sm:tracking-[0.03em] md:tracking-[0.04em] lg:tracking-[0.05em] 
+               flex items-center gap-2">
+        작품이 되는 이야기, 브런치스토리
+        <!-- <span class="flex-shrink-0 
+                   w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 
+                   rounded-full bg-[#231f20] 
+                   flex items-center justify-center 
+                   text-white 
+                   text-sm sm:text-base md:text-lg lg:text-[20px] 
+                   font-serif">
+          b
+        </span> -->
+      </h3>
+
+      <!-- 설명 문단 -->
+      <p class="!mt-4 
+              text-[#ccc] 
+              !space-y-1 sm:space-y-2">
+        <span class="block">브런치스토리에 담긴 아름다운 작품을 감상해 보세요.</span>
+        <span class="block">그리고 다시 꺼내 보세요.</span>
+        <span class="block">서랍 속 간직하고 있는 글과 감성을.</span>
+      </p>
+
+      <!-- 공지 -->
+      <ul class="!mt-6 text-right">
+        <li class="text-sm sm:text-base md:text-[16px]">
+          <a href="https://brunch.co.kr/@brunch/343" target="_blank" class="text-cyan-600 italic hover:underline">
+            2024 새로운 작가의 탄생을 축하해 주세요!
+          </a>
+          <span class="ml-2 text-cyan-500 italic">notice</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
+  <main class="max-w-[960px]">
+    <!-- 2) 슬라이더 섹션 -->
+    <section class="!py-12 relative bg-gray-500">
+      <div class="container mx-auto px-4">
+        <div class="relative overflow-x-hidden">
+
+          <!-- 1) 슬라이드 뷰포트 -->
+          <div class="swiper-container overflow-x-hidden ">
+            <div class="swiper-wrapper">
+              <!-- 10개의 슬라이드 -->
+              <!-- Pond -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg h-80 w-96">
+                  <img src="https://picsum.photos/id/1069/600/400" alt="Pond" class="w-full h-full object-cover" />
+                  <div class="absolute inset-0  bg-opacity-30"></div>
+                  <div class="absolute top-1/2 left-6 transform -translate-y-1/2 text-white">
+                    <p class="text-2xl font-light leading-snug">“낼래? 맞을래?”… “없다”</p>
+                    <p class="mt-2 text-sm">한 방울씩…</p>
+                    <div class="mt-4 text-xs flex items-center">
+                      <span class="mr-4">by 고수</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-1" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M5 5v14l7-7 7 7V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z" />
+                      </svg>
+                      <span>1명이 응원</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 카드 -->
+              <div class="swiper-slide px-2">
+                <div class="bg-white w-80 h-40 rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
+                  <p class="text-lg leading-tight">
+                    주목받고 있는 <span class="underline decoration-green-400">응원</span><br />
+                    인기글을 소개합니다.
+                  </p>
+                  <span class="block w-10 border-t-2 border-gray-300 my-4"></span>
+                  <img src="https://i.pravatar.cc/100?img=32" alt="avatar" class="w-12 h-12 rounded-full" />
+                  <p class="mt-2 text-sm text-gray-700">Kirei</p>
+                  <p class="mt-1 text-xs text-gray-500">19. 인정과 무시</p>
+                </div>
+              </div>
+              <!-- Book Cover -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg h-80">
+                  <div class="bg-gradient-to-b from-white to-gray-200 w-full h-full flex items-center justify-center">
+                    <img src="https://picsum.photos/id/1050/300/380" alt="Book Cover" class="object-contain" />
+                  </div>
+                  <div class="absolute bottom-6 left-6 text-gray-700 text-sm">
+                    First Edition<br />
+                    Released date. Jun 17, 2024
+                  </div>
+                </div>
+              </div>
+              <!-- Illustration + Badge -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg h-80">
+                  <img src="https://picsum.photos/id/1011/600/400" alt="Illustration"
+                    class="w-full h-full object-cover" />
+                  <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-xs">
+                    응원
+                  </div>
+                </div>
+              </div>
+              <!-- Travel -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg h-80">
+                  <img src="https://picsum.photos/id/1030/600/400" alt="Travel" class="w-full h-full object-cover" />
+                  <div class="absolute bottom-6 left-6 text-white">
+                    <p class="text-xl font-light">여행 삼일 전에 비행기 예약하기</p>
+                    <p class="mt-1 text-sm">by narae</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Jeju -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg h-80">
+                  <img src="https://picsum.photos/id/1020/600/400" alt="Jeju Culture"
+                    class="w-full h-full object-cover" />
+                  <div class="absolute bottom-6 left-6 text-white">
+                    <p class="text-xl font-light">살다보면 알게 되는 제주문화 5가지</p>
+                    <p class="mt-1 text-sm">by 피터팬</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Food -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg h-80">
+                  <img src="https://picsum.photos/id/1040/600/400" alt="Food" class="w-full h-full object-cover" />
+                  <div class="absolute bottom-6 left-6 text-white">
+                    <p class="text-xl font-light">비교하지 않으면, 비교할 수 없는 행복이 온다</p>
+                    <p class="mt-1 text-sm">by 통통코딩</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Library -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg h-80">
+                  <img src="https://picsum.photos/id/1070/600/400" alt="Library" class="w-full h-full object-cover" />
+                  <div class="absolute bottom-6 left-6 text-white">
+                    <p class="text-xl font-light">싱가포르 가이드 북 리뷰</p>
+                    <p class="mt-1 text-sm">by 생각프로젝트</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Forest -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg h-80">
+                  <img src="https://picsum.photos/id/1080/600/400" alt="Forest" class="w-full h-full object-cover" />
+                  <div class="absolute bottom-6 left-6 text-white">
+                    <p class="text-xl font-light">도시를 떠나 숲길 걷기</p>
+                    <p class="mt-1 text-sm">by 산책가</p>
+                  </div>
+                </div>
+              </div>
+              <!-- City Night -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg h-80">
+                  <img src="https://picsum.photos/id/1090/600/400" alt="City Night"
+                    class="w-full h-full object-cover" />
+                  <div class="absolute bottom-6 left-6 text-white">
+                    <p class="text-xl font-light">도시 야경 속의 밤 산책</p>
+                    <p class="mt-1 text-sm">by 야경러</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- 2) 네비게이션 버튼 (원형+SVG) -->
+          <button
+            class="swiper-button-prev absolute top-1/2 -translate-y-1/2 -left-8 z-10 !text-gray-800 !w-20 !h-20 bg-gray-100  hover:bg-opacity-100   rounded-full flex items-center justify-center"
+            aria-label="Previous slide">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 !text-gray-800" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg> -->
+          </button>
+
+          <button
+            class="swiper-button-next absolute top-1/2 -translate-y-1/2 -right-8 z-10  !text-gray-800 !w-20 !h-20 bg-gray-100  bg-opacity-50 hover:bg-opacity-100 rounded-full flex items-center justify-center "
+            aria-label="Next slide">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg> -->
+          </button>
+
+        
+           <div class="swiper-pagination w-full text-center !space-x-8 !bg-none"></div>
+          </div>
+        </div>
+
+       
+      </div>
+    </section>
+
+
+
+    <section class="!mt-[155px] px-4">
+      <h3 class="text-center font-light text-2xl tracking-[0.5em] !mb-[50px]">
+        TRAVELKEYWORD
+      </h3>
+
+      <div class="overflow-x-hidden">
+        <div class="grid grid-cols-8 box-border w-full max-w-6xl mx-auto">
+          <!-- === 1행 === -->
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            지구한바퀴<br />세계여행
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            그림·웹툰
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            알수록 좋은 경제
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            IT<br />트렌드
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            사진·촬영
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            취향저격<br />영화 리뷰
+          </div>
+          <div
+            class="relative w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            오늘은<br />이런 책
+            <span
+              class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-r border-gray-200 bg-white">
+            뮤직 인사이드
+          </div>
+
+          <!-- === 2행 === -->
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            글쓰기<br />코치
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            직장인<br />현실 조언
+          </div>
+          <div
+            class="relative w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            스타트업<br />경험담
+            <span
+              class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            육아 이야기
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            요리·레시피
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            건강·운동
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
+            멘탈 관리<br />심리 탐구
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-r border-gray-200 bg-white">
+            디자인<br />스토리
+          </div>
+
+          <!-- === 3행 === -->
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
+            문화·예술
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
+            건축·설계
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
+            인문학·철학
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
+            쉽게 읽는<br />역사
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
+            우리집<br />반려동물
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
+            멋진<br />캘리그래피
+          </div>
+          <div
+            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-b border-gray-200 bg-white">
+            사랑·이별
+          </div>
+          <div
+            class="relative w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-r border-b border-gray-200 bg-white">
+            감성<br />에세이
+            <span
+              class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- 요일별 연재 : 탭 기능 -->
+
+    <section class="!mt-[146px] mx-auto w-full sm:max-w-xl md:max-w-3xl lg:max-w-5xl !px-4 !py-12">
+      <h3 class="text-center font-light text-2xl !mb-12">요일별 연재</h3>
+
+      <!-- 요일 탭 -->
+      <div class="!mb-6 text-center">
+        <ul class="flex justify-center text-sm font-medium text-gray-500 border-b border-gray-200 "
+          data-tabs-toggle="#day-tab-content" role="tablist">
+          <li><button class="!px-4 !py-2 border-b-2  rounded-t-lg cursor-pointer" id="mon-tab" data-tabs-target="#mon"
+              type="button" role="tab">월</button></li>
+          <li><button class="!px-4 !py-2  border-b-2  rounded-t-lg cursor-pointer" id="tue-tab" data-tabs-target="#tue"
+              type="button" role="tab">화</button></li>
+          <li><button class="!px-4 !py-2  border-b-2  rounded-t-lg text-blue-600 border-blue-600 active cursor-pointer"
+              id="wed-tab" data-tabs-target="#wed" type="button" role="tab">수</button></li>
+          <li><button class="!px-4 !py-2  border-b-2 r ounded-t-lg cursor-pointer" id="thu-tab" data-tabs-target="#thu"
+              type="button" role="tab">목</button></li>
+          <li><button class="!px-4 !py-2  border-b-2  rounded-t-lg cursor-pointer" id="fri-tab" data-tabs-target="#fri"
+              type="button" role="tab">금</button></li>
+          <li><button class="!px-4 !py-2  border-b-2  rounded-t-lg cursor-pointer" id="sat-tab" data-tabs-target="#sat"
+              type="button" role="tab">토</button></li>
+          <li><button class="!px-4 !py-2  border-b-2  rounded-t-lg cursor-pointer" id="sun-tab" data-tabs-target="#sun"
+              type="button" role="tab">일</button></li>
+        </ul>
+      </div>
+
+      <!-- 정렬 탭 (더미) -->
+      <div class="text-sm text-gray-500 !my-3">
+        <ul class="flex items-center gap-4 text-center justify-end !pr-8">
+          <li class="!mx-0"><button class="font-semibold text-gray-900">최신순</button></li>
+          <li class="!mx-0"> <button class="text-gray-500">응원순</button></li>
+          <li class="!mx-0"><button class="text-gray-500">라이킷순</button></li>
+        </ul>
+      </div>
+
+      <!-- 콘텐츠 -->
+      <div id="day-tab-content" class="h-full sm:h-full h-[680px] !space-y-8 !px-4 !py-4">
+
+        <!-- 수요일 콘텐츠 (기본 활성) -->
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-3" id="wed" role="tabpanel"
+          aria-labelledby="wed-tab">
+          <div class="flex  gap-4 bg-white !p-[20px] rounded shadow-sm w-96 md:w-[400px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">감성 한 스푼</p>
+              <p class="font-medium text-gray-800">나비</p>
+              <p class="text-xs text-gray-500 mt-1">by 한진큼</p>
+            </div>
+            <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+          </div>
+
+          <div class="flex gap-4 bg-white p-5 rounded shadow-sm w-full max-w-md h-26">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">출산일기</p>
+              <p class="font-medium text-gray-800">어제는 엄마의 출산일이었습니다.</p>
+              <p class="text-xs text-gray-500 mt-1">by 그럴수있지</p>
+            </div>
+            <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+          </div>
+        </div>
+
+        <!-- 월요일 콘텐츠 -->
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2  gap-3" id="mon" role="tabpanel"
+          aria-labelledby="mon-tab">
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기2</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <!-- 화요일 콘텐츠 -->
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-3" id="tue" role="tabpanel"
+          aria-labelledby="tue-tab">
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+
+          <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 ">
+            <div class="flex-1">
+              <p class="text-xs text-gray-400">마흔에 읽는 그림책</p>
+              <p class="font-medium text-gray-800">나는, 비둘기</p>
+              <p class="text-xs text-gray-500 mt-1">by 부산우</p>
+            </div>
+            <div class="">
+              <img class="w-16 h-16 object-cover rounded" src="https://via.placeholder.com/80" />
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 목~일 (더미 구성) -->
+        <div class="hidden grid grid-cols-2 gap-6" id="thu" role="tabpanel" aria-labelledby="thu-tab">
+          <p class="col-span-2 text-center text-gray-400">목요일 연재가 준비 중입니다.</p>
+        </div>
+        <div class="hidden grid grid-cols-2 gap-6" id="fri" role="tabpanel" aria-labelledby="fri-tab">
+          <p class="col-span-2 text-center text-gray-400">금요일 연재가 준비 중입니다.</p>
+        </div>
+        <div class="hidden grid grid-cols-2 gap-6" id="sat" role="tabpanel" aria-labelledby="sat-tab">
+          <p class="col-span-2 text-center text-gray-400">토요일 연재가 준비 중입니다.</p>
+        </div>
+        <div class="hidden grid grid-cols-2 gap-6" id="sun" role="tabpanel" aria-labelledby="sun-tab">
+          <p class="col-span-2 text-center text-gray-400">일요일 연재가 준비 중입니다.</p>
+        </div>
+      </div>
+
+      <!-- 전체보기 -->
+      <div class="text-center !mt-10">
+        <button
+          class=" px-4 py-2 w-[360px] h-[82px] text-2xl font-light cursor-pointer border border-gray-300 rounded-full text-gray-600 hover:bg-gray-200">
+          연재 작품 전체 보기
+        </button>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- 프로필 -->
+
+    <section class="bg-[#fafafa] !mt-[146px] !pt-[100px] !pb-[80px] ">
+      <!-- 타이틀 -->
+      <div class="text-center !mb-[50px]">
+        <h3 class="text-xl tracking-[0.3em] font-medium text-gray-900 !mb-2">TRAVEL WRITERS</h3>
+        <p class="text-sm text-gray-400 !my-[15px]">브런치 추천 작가</p>
+
+        <!-- 카테고리 탭 -->
+        <ul id="travelTab" data-tabs-toggle="#travelTabContent" role="tablist"
+          class="flex justify-center gap-2 mt-10 text-sm font-medium text-center">
+
+          <li role="presentation">
+            <button id="domestic-tab" data-tabs-target="#domestic" type="button" role="tab" aria-controls="domestic"
+              aria-selected="true" class="cursor-pointer w-[64px] h-[28px] px-4 py-1.5 text-sm 
+                       text-teal-400  bg-white border border-teal-400 rounded-full font-light ">
+              국내여행
+            </button>
+          </li>
+
+          <li role="presentation">
+            <button id="abroad-tab" data-tabs-target="#abroad" type="button" role="tab" aria-controls="abroad"
+              aria-selected="false" class="cursor-pointer w-[64px] h-[28px] px-4 py-1.5 text-sm 
+                       text-gray-400 bg-white border border-gray-400 rounded-full font-light">
+              해외여행
+            </button>
+          </li>
+
+          <li role="presentation">
+            <button id="solo-tab" data-tabs-target="#solo" type="button" role="tab" aria-controls="solo"
+              aria-selected="false" class="cursor-pointer w-[64px] h-[28px] px-4 py-1.5 text-sm 
+                       text-gray-400 bg-white border border-gray-400 rounded-full font-light">
+              혼자 여행
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 탭 콘텐츠 래퍼 -->
+      <div id="travelTabContent" class="max-w-6xl !mx-auto !px-4">
+
+        <!-- 카드 리스트 (국내여행 탭) -->
+        <div id="domestic" role="tabpanel" aria-labelledby="domestic-tab"
+          class="max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
+          <!-- 카드 1 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">김고로123</h4>
+            <p class="text-sm text-gray-500 !mt-3">미식 큐레이터</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              Taste Curator & Gourmet Lover of Gangneung. 인생은 순정이다. 식문화를 수집하며 사는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 2 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">케니스트리</h4>
+            <p class="text-sm text-gray-500 !mt-3">에세이스트</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              글 쓰는 마케터 입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 3 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 꽃돼지 후니</h4>
+            <p class="text-sm text-gray-500 !mt-3">핑거 CEO</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 4 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 태화강그대</h4>
+            <p class="text-sm text-gray-500 !mt-3">주부</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              2번의 암수술을 하고 제2의 인생을 울산에서 시작했습니다. 삶을 제대로 살아보려 애쓰는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 5 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">지식농부</h4>
+            <p class="text-sm text-gray-500 !mt-3">출간작가</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              ‘오늘, 남편이 퇴직했습니다’ 작가, OK지식나눔연구소 소장, 퇴직강사, 분노조절강사 등…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 6 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">작은콩</h4>
+            <p class="text-sm text-gray-500 !mt-3">일러스트레이터</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              희소병 환자로 살아가며, 느리지만 꾸준한 삶의 기록을 글과 그림으로 남깁니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 카드 리스트 (해외여행 탭) -->
+        <div id="abroad" role="tabpanel" aria-labelledby="abroad-tab"
+          class="hidden max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
+          <!-- 카드 1 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">김고로</h4>
+            <p class="text-sm text-gray-500 !mt-3">미식 큐레이터</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              Taste Curator & Gourmet Lover of Gangneung. 인생은 순정이다. 식문화를 수집하며 사는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 2 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">케니스트리</h4>
+            <p class="text-sm text-gray-500 !mt-3">에세이스트</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              글 쓰는 마케터 입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 3 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 꽃돼지 후니</h4>
+            <p class="text-sm text-gray-500 !mt-3">핑거 CEO</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 4 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 태화강그대</h4>
+            <p class="text-sm text-gray-500 !mt-3">주부</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              2번의 암수술을 하고 제2의 인생을 울산에서 시작했습니다. 삶을 제대로 살아보려 애쓰는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- 카드 리스트 (혼자여행 탭) -->
+        <div id="solo" role="tabpanel" aria-labelledby="solo-tab"
+          class="hidden max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
+
+
+
+          <!-- 카드 3 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 꽃돼지 후니</h4>
+            <p class="text-sm text-gray-500 !mt-3">핑거 CEO</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 4 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3"> 태화강그대</h4>
+            <p class="text-sm text-gray-500 !mt-3">주부</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              2번의 암수술을 하고 제2의 인생을 울산에서 시작했습니다. 삶을 제대로 살아보려 애쓰는 중입니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 5 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">지식농부</h4>
+            <p class="text-sm text-gray-500 !mt-3">출간작가</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              ‘오늘, 남편이 퇴직했습니다’ 작가, OK지식나눔연구소 소장, 퇴직강사, 분노조절강사 등…
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+
+          <!-- 카드 6 -->
+          <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+            <img src="https://placehold.co/96x96" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+            <h4 class="text-base font-medium text-gray-900 !mt-3">작은콩</h4>
+            <p class="text-sm text-gray-500 !mt-3">일러스트레이터</p>
+            <p class="text-xs text-gray-400 leading-relaxed !my-4">
+              희소병 환자로 살아가며, 느리지만 꾸준한 삶의 기록을 글과 그림으로 남깁니다.
+            </p>
+            <div class="flex justify-center flex-wrap gap-2 text-sm ">
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+              <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <!-- 1. 섹션 감싸기 -->
+    <!-- 슬라이드 섹션 -->
+    <!-- 1. 섹션 감싸기 -->
+    <section class="!my-20 h-[500px]">
+      <div class="max-w-6xl !mx-auto !px-4">
+        <!-- 제목 -->
+        <h2 class="text-3xl font-serif font-light text-center text-gray-900">
+          RECOMMENDED ARTICLES
+        </h2>
+        <p class="!my-4 text-center text-gray-600">
+          브런치의 다양한 글을 만나보세요.
+        </p>
+
+        <!-- Swiper Carousel -->
+        <div class="relative !my-12">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+              <!-- 카드 1 -->
+              <div class="swiper-slide !overflow-hidden">
+                <div class="w-full max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                  <img src="https://via.placeholder.com/400x300" alt="기사 이미지 1" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      집에 오지 말라는 시어머니
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1 line-clamp-2">
+                      이번 연휴가 길어 시댁에 다녀오려 했지만, 남편은 연휴에도 일을 한다고 했다...
+                    </p>
+                    <p class="text-xs text-gray-400 italic mt-2">by 슈퍼엄마</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 카드 2 -->
+              <div class="swiper-slide">
+                <div class="w-[280px] mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                  <img src="https://via.placeholder.com/400x300" alt="기사 이미지 2" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      중국집에 전화로 주문하면 생기는 일
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1 line-clamp-2">
+                      가끔씩 중국집에서 배달을 시켜 먹는 일이 있다. 귀찮을 땐 역시 중국 음식이 최고!
+                    </p>
+                    <p class="text-xs text-gray-400 italic mt-2">by pathemata mathematata</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 카드 3 -->
+              <div class="swiper-slide">
+                <div class="w-[280px] mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                  <img src="https://via.placeholder.com/400x300" alt="기사 이미지 3" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      성심당에서는 새치기 가능
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1 line-clamp-2">
+                      나에게는 브런치 글 동무들이 있다. 그중 ‘빵’을 주제로 한 소모임이 있다...
+                    </p>
+                    <p class="text-xs text-gray-400 italic mt-2">by unknown</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 카드 4 -->
+              <div class="swiper-slide">
+                <div class="w-[280px] mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                  <img src="https://via.placeholder.com/400x300" alt="기사 이미지 4" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      퇴사하는 후배의 마지막 날
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1 line-clamp-2">
+                      퇴사하겠다는 말을 들을 때마다 나는 잠시 멈춘다. 사람들이 떠나는 이유는 보이지만...
+                    </p>
+                    <p class="text-xs text-gray-400 italic mt-2">by unknown</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 카드 5 -->
+              <div class="swiper-slide">
+                <div class="w-[280px] mx-auto bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                  <img src="https://via.placeholder.com/400x300" alt="기사 이미지 5" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      시어머니의 농담처럼 경고처럼
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-1 line-clamp-2">
+                      “자기야, 엄마 목소리 안 좋아. 몸이 안 좋아 보여.” 남편은 하루에 세 번 전화를 한다...
+                    </p>
+                    <p class="text-xs text-gray-400 italic mt-2">by unknown</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 네비게이션 -->
+            <div class="swiper-button-prev text-gray-500 hover:text-gray-900 "></div>
+            <div class="swiper-button-next text-gray-500 hover:text-gray-900"></div>
+          </div>
+
+          <!-- 페이징 -->
+          <div class="swiper-pagination !mt-6 relative z-0 !top-[280px]"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+  </main>
+
+
+
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-screen-xl !mx-auto !px-4 !py-16">
+
+      <!-- 상단 그리드: 1→2→5컬럼 시점 변경 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+        <!-- 1) 로고 + 인용문 -->
+        <div class="!space-y-2">
+          <a href="#" class="inline-block">
+            <img src="/path/to/logo.svg" alt="Brunch Logo" class="w-8 h-8" />
+          </a>
+          <p class="text-white italic font-light">
+            You can make anything<br />by writing.
+          </p>
+          <p class="text-sm text-gray-500">C.S.Lewis</p>
+        </div>
+
+        <!-- 2) 링크 그룹 1 -->
+        <div>
+          <h3 class="!mb-4 text-sm font-semibold text-white uppercase">브런치 이용안내</h3>
+          <ul class="!space-y-2">
+            <li><a href="#" class="hover:text-white">작가신청</a></li>
+            <li><a href="#" class="hover:text-white">작가 지원 프로젝트</a></li>
+            <li><a href="#" class="hover:text-white">제휴제안</a></li>
+            <li><a href="#" class="hover:text-white">고객센터</a></li>
+          </ul>
+        </div>
+
+        <!-- 3) 링크 그룹 2 -->
+        <div>
+          <h3 class="!mb-4 text-sm font-semibold text-white uppercase">이용약관</h3>
+          <ul class="!space-y-2">
+            <li><a href="#" class="hover:text-white">이전 이용약관</a></li>
+            <li><a href="#" class="hover:text-white">카카오 유료서비스 이용약관</a></li>
+            <li>
+              <a href="#" class="hover:text-white font-semibold text-white">
+                카카오 개인정보 처리방침
+              </a>
+            </li>
+            <li><a href="#" class="hover:text-white">청소년 보호정책</a></li>
+            <li><a href="#" class="hover:text-white">운영정책</a></li>
+          </ul>
+        </div>
+
+        <!-- 4) 링크 그룹 3 -->
+        <div>
+          <h3 class="!mb-4 text-sm font-semibold text-white uppercase">브런치스토리팀</h3>
+          <ul class="!space-y-2">
+            <li><a href="#" class="hover:text-white">공지사항</a></li>
+            <li><a href="#" class="hover:text-white">공식 카카오톡 채널</a></li>
+            <li><a href="#" class="hover:text-white">공식 인스타그램</a></li>
+            <li><a href="#" class="hover:text-white">공식 페이스북</a></li>
+          </ul>
+        </div>
+
+        <!-- 5) 앱 다운로드 배지 (중간 크기에서 두 칸 합치기) -->
+        <div class="flex items-end justify-end space-x-4 sm:col-span-2 lg:col-span-1">
+          <a href="#">
+            <img src="/path/to/google-play-badge.svg" alt="Google Play" class="h-10" />
+          </a>
+          <a href="#">
+            <img src="/path/to/app-store-badge.svg" alt="App Store" class="h-10" />
+          </a>
+        </div>
+
+      </div>
+
+      <!-- 하단 저작권 -->
+      <div
+        class="!mt-12 border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+        <button class="flex items-center space-x-1 hover:text-white">
+          <span>© Kakao Corp.</span>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path d="M5 8l5 5 5-5H5z" />
+          </svg>
+        </button>
+        <p class="!mt-4 !sm:mt-0">All Rights Reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+</body>
+
+<script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./../js/index.js" defer></script>
+
+</html>
