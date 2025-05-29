@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tailwind + Flowbite + Swiper Slider</title>
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Flowbite 플러그인 등록 -->
+  <script>
+    tailwind.config = {
+      plugins: [window.flowbitePlugin]
+    }
+  </script>
+  <!-- Flowbite CSS -->
+  <link
+    href="https://unpkg.com/flowbite@1.7.0/dist/flowbite.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+</head>
+<body class="bg-gray-100">
+
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+
+      <!-- Slider -->
+      <div class="relative">
+        <!-- Viewport -->
+        <div class="overflow-hidden">
+          <!-- Track -->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              
+              <!-- Slide 1 -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg">
+                  <img
+                    src="https://via.placeholder.com/600x400?text=Slide+1"
+                    alt="Slide 1"
+                    class="w-full h-60 object-cover"
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                  <div class="absolute bottom-4 left-4 text-white">
+                    <h2 class="text-xl font-semibold">“낼래? 맞을래?”… 없다</h2>
+                    <p class="mt-1 text-sm">한 방울 씩…</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg">
+                  <img
+                    src="https://via.placeholder.com/600x400?text=Slide+2"
+                    alt="Slide 2"
+                    class="w-full h-60 object-cover"
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                  <div class="absolute bottom-4 left-4 text-white">
+                    <h2 class="text-xl font-semibold">디자이너의 인생 2막 그림에세이</h2>
+                    <p class="mt-1 text-sm">First Edition · Jun 17, 2024</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide px-2">
+                <div class="relative rounded-lg overflow-hidden shadow-lg">
+                  <img
+                    src="https://via.placeholder.com/600x400?text=Slide+3"
+                    alt="Slide 3"
+                    class="w-full h-60 object-cover"
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+                  <div class="absolute bottom-4 left-4 text-white">
+                    <h2 class="text-xl font-semibold">여행 삼일 전에 비행기 예약하기</h2>
+                    <p class="mt-1 text-sm">by narae</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- …필요한 만큼 슬라이드 반복… -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 네비게이션 버튼 -->
+        <button
+          class="swiper-button-prev absolute top-1/2 -translate-y-1/2 left-0 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"
+          aria-label="Previous slide"
+        >‹</button>
+        <button
+          class="swiper-button-next absolute top-1/2 -translate-y-1/2 right-0 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"
+          aria-label="Next slide"
+        >›</button>
+
+        <!-- Pagination (dots) -->
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Flowbite JS -->
+  <script src="https://unpkg.com/flowbite@1.7.0/dist/flowbite.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // Swiper 인스턴스 생성
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 5,
+      spaceBetween: 16,
+      loop: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        1024: { slidesPerView: 5 },
+        768:  { slidesPerView: 3 },
+        640:  { slidesPerView: 2 },
+        320:  { slidesPerView: 1 },
+      },
+    });
+  </script>
+
+</body>
+</html>

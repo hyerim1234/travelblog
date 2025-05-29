@@ -175,10 +175,10 @@
     <!-- 2) 슬라이더 섹션 -->
     <section class="py-12">
       <div class="container mx-auto px-4">
-        <div class="relative overflow-x-hidden">
+        <div class="relative">
 
           <!-- 1) 슬라이드 뷰포트 -->
-          <div class="swiper-container overflow-x-hidden">
+          <div class="swiper-container">
             <div class="swiper-wrapper">
               <!-- 10개의 슬라이드 -->
               <!-- Pond -->
@@ -203,7 +203,8 @@
               </div>
               <!-- 카드 -->
               <div class="swiper-slide px-2">
-                <div class="bg-white w-80 h-40 rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
+                <div
+                  class="bg-white h-80 rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
                   <p class="text-lg leading-tight">
                     주목받고 있는 <span class="underline decoration-green-400">응원</span><br />
                     인기글을 소개합니다.
@@ -304,7 +305,7 @@
 
           <!-- 2) 네비게이션 버튼 (원형+SVG) -->
           <button
-            class="swiper-button-prev absolute top-1/2 -translate-y-1/2 -left-8 z-10 w-16 h-16 hover:bg-opacity-100 rounded-full flex items-center justify-center"
+            class="swiper-button-prev absolute top-1/2 -translate-y-1/2 -left-8 z-10 w-16 h-16  bg-opacity-60 hover:bg-opacity-100 rounded-full flex items-center justify-center shadow-lg"
             aria-label="Previous slide">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -312,7 +313,7 @@
             </svg>
           </button>
           <button
-            class="swiper-button-next absolute top-1/2 -translate-y-1/2 -right-8 z-10 w-16 h-16   hover:bg-opacity-100 rounded-full flex items-center justify-center "
+            class="swiper-button-next absolute top-1/2 -translate-y-1/2 -right-8 z-10 w-16 h-16  bg-opacity-60 hover:bg-opacity-100 rounded-full flex items-center justify-center shadow-lg"
             aria-label="Next slide">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -321,7 +322,7 @@
           </button>
 
           <!-- 3) 숫자 페이지네이션 -->
-          <div class="swiper-pagination absolute bottom-4 left-0 w-full text-center"></div>
+          <div class="swiper-pagination bg-blue-100 top-1/2  "></div>
         </div>
       </div>
     </section>
