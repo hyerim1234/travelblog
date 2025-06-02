@@ -28,7 +28,7 @@ const firstswiper = new Swiper('.swiper-container', {
     // renderBullet는 now-className 인자로 받아오지만, 클래스 이름을 직접 안 써도 됩니다.
     renderBullet: (idx) => {
       const num = idx + 1 < 10 ? '0' + (idx + 1) : (idx + 1);
-      return `<span class="pagination-number">${num}</span>`;
+      //return `<span class="pagination-number">${num}</span>`;
       //return `<span class="${className}">${num}</span>`;
     }
   },
