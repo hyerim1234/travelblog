@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>슬라이드 박스 그룹형 브런치 슬라이더</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    .swiper-container { overflow: hidden; }
+    .swiper-pagination {
+      display: flex !important;
+      justify-content: center;
+      /* margin-top: 1.5rem !important; */
+    background-color: red;
+      padding-top: 50px !important;
+    }
+    .swiper-pagination-bullet {
+      width: auto;
+      height: auto;
+      opacity: 0.5;
+      color: #999;
+      margin: 0 0.25rem;
+      font-size: 1rem;
+      padding-bottom: 0.15rem;
+      cursor: pointer;
+      border-radius: auto;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      color: #000;
+      border-bottom: 2px solid #000;
+    }
+    .swiper-button-prev, .swiper-button-next {
+      top: 50% !important;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+<body class="bg-gray-900">
+
+  <section class="py-12 overflow-x-hidden">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center">
+        <!-- 3개 슬라이드+네비를 감싸는 긴 배경 박스 -->
+        <div class="relative w-full max-w-6xl bg-[#202537] rounded-3xl shadow-lg px-8 py-8 overflow-hidden">
+          <div class="swiper-container !pb-10">
+            <div class="swiper-wrapper">
+              <!-- ...슬라이드 반복(아래 예시) -->
+              <div class="swiper-slide flex justify-center">
+                <div class="bg-white rounded-2xl shadow-lg w-[340px] h-[380px] flex flex-col justify-center gap-4 p-6">
+                  <!-- 카드 내용... -->
+                  <div class="flex items-center gap-4 bg-gray-100 rounded-lg p-3">
+                    <img src="https://picsum.photos/id/1069/60/60" class="rounded-lg w-14 h-14 object-cover" />
+                    <div>
+                      <p class="font-semibold">“낼래? 맞을래?”… “없다”</p>
+                      <span class="text-xs text-gray-500">by 고수</span>
+                    </div>
+                  </div>
+                  <!-- ...이하 동일하게 카드 채우기 -->
+                </div>
+              </div>
+              <!-- 슬라이드 박스 2~6... 동일하게 복붙 -->
+               <div class="swiper-slide flex justify-center">
+                <div class="bg-white rounded-2xl shadow-lg w-[340px] h-[380px] flex flex-col justify-center gap-4 p-6">
+                  <!-- 카드 내용... -->
+                  <div class="flex items-center gap-4 bg-gray-100 rounded-lg p-3">
+                    <img src="https://picsum.photos/id/1069/60/60" class="rounded-lg w-14 h-14 object-cover" />
+                    <div>
+                      <p class="font-semibold">“낼래? 맞을래?”… “없다”</p>
+                      <span class="text-xs text-gray-500">by 고수</span>
+                    </div>
+                  </div>
+                  <!-- ...이하 동일하게 카드 채우기 -->
+                </div>
+              </div>
+              <div class="swiper-slide flex justify-center">
+                <div class="bg-white rounded-2xl shadow-lg w-[340px] h-[380px] flex flex-col justify-center gap-4 p-6">
+                  <!-- 카드 내용... -->
+                  <div class="flex items-center gap-4 bg-gray-100 rounded-lg p-3">
+                    <img src="https://picsum.photos/id/1069/60/60" class="rounded-lg w-14 h-14 object-cover" />
+                    <div>
+                      <p class="font-semibold">“낼래? 맞을래?”… “없다”</p>
+                      <span class="text-xs text-gray-500">by 고수</span>
+                    </div>
+                  </div>
+                  <!-- ...이하 동일하게 카드 채우기 -->
+                </div>
+              </div>
+
+              <div class="swiper-slide flex justify-center">
+                <div class="bg-white rounded-2xl shadow-lg w-[340px] h-[380px] flex flex-col justify-center gap-4 p-6">
+                  <!-- 카드 내용... -->
+                  <div class="flex items-center gap-4 bg-gray-100 rounded-lg p-3">
+                    <img src="https://picsum.photos/id/1069/60/60" class="rounded-lg w-14 h-14 object-cover" />
+                    <div>
+                      <p class="font-semibold">“낼래? 맞을래?”… “없다”</p>
+                      <span class="text-xs text-gray-500">by 고수</span>
+                    </div>
+                  </div>
+                  <!-- ...이하 동일하게 카드 채우기 -->
+                </div>
+              </div>
+
+              <div class="swiper-slide flex justify-center">
+                <div class="bg-white rounded-2xl shadow-lg w-[340px] h-[380px] flex flex-col justify-center gap-4 p-6">
+                  <!-- 카드 내용... -->
+                  <div class="flex items-center gap-4 bg-gray-100 rounded-lg p-3">
+                    <img src="https://picsum.photos/id/1069/60/60" class="rounded-lg w-14 h-14 object-cover" />
+                    <div>
+                      <p class="font-semibold">“낼래? 맞을래?”… “없다”</p>
+                      <span class="text-xs text-gray-500">by 고수</span>
+                    </div>
+                  </div>
+                  <!-- ...이하 동일하게 카드 채우기 -->
+                </div>
+              </div>
+
+              <div class="swiper-slide flex justify-center">
+                <div class="bg-white rounded-2xl shadow-lg w-[340px] h-[380px] flex flex-col justify-center gap-4 p-6">
+                  <!-- 카드 내용... -->
+                  <div class="flex items-center gap-4 bg-gray-100 rounded-lg p-3">
+                    <img src="https://picsum.photos/id/1069/60/60" class="rounded-lg w-14 h-14 object-cover" />
+                    <div>
+                      <p class="font-semibold">“낼래? 맞을래?”… “없다”</p>
+                      <span class="text-xs text-gray-500">by 고수</span>
+                    </div>
+                  </div>
+                  <!-- ...이하 동일하게 카드 채우기 -->
+                </div>
+              </div>
+              <!-- ... -->
+            </div>
+            <!-- 네비/페이지네이션은 swiper-container 안쪽에 위치 -->
+            <button class="swiper-button-prev absolute top-1/2 left-2 z-10 w-12 h-12 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full flex items-center justify-center shadow-lg" aria-label="Previous slide">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button class="swiper-button-next absolute top-1/2 right-2 z-10 w-12 h-12 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full flex items-center justify-center shadow-lg" aria-label="Next slide">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 32,
+      centeredSlides: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: (idx, className) => {
+          const num = idx+1 < 10 ? '0'+(idx+1) : (idx+1);
+          return `<span class="${className}">${num}</span>`;
+        },
+      },
+      breakpoints: {
+        1280: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 32 },
+        1024: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 24 },
+        640:  { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 16 },
+      },
+    });
+  </script>
+</body>
+</html>

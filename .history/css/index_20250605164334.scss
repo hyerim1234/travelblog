@@ -1,0 +1,88 @@
+/* =========================
+   공통 리셋
+   ========================= */
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* … (기존 @font-face, #event-banner 등 생략) … */
+
+/* =========================
+   Swiper 페이지네이션 관련 수정
+   ========================= */
+
+/* 1) 기본 dot(원) 모양을 완전히 숨기지 않고, 숫자만 스타일링 */
+.swiper-pagination {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0 !important;
+}
+
+/* ◀ 기존에 dot을 투명하게 만들던 부분을 주석 처리 혹은 삭제 ▶ */
+/*
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 0.75rem !important;
+  padding: 0 !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  color: #0000 !important;
+  opacity: 1 !important;
+  font-weight: normal !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  cursor: pointer;
+}
+.swiper-pagination-bullet::before {
+  display: none !important;
+}
+*/
+
+/* 2) 숫자 페이지네이션(“01 02 03 …”)처럼 보이도록 최소한 스타일만 남김 */
+.swiper-pagination-bullet {
+  /* 기본 dot 대신 숫자만 보이도록: 배경 투명, 테두리 없음 */
+  background-color: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 0.75rem !important;
+  padding: 0 !important;
+
+  /* 숫자 폰트 크기/라인 높이 설정 */
+  font-size: 1rem !important;
+  line-height: 1 !important;
+
+  /* inactive(비활성) 숫자는 연한 회색 */
+  color: #4c4c4c !important;
+  font-weight: normal !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  cursor: pointer;
+}
+
+/* 활성 페이지(Active bullet)는 굵은 검정, 밑줄 */
+.swiper-pagination-bullet-active {
+  color: #000000 !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+  background-color: transparent !important;
+}
+
+/* 네비게이션 버튼(◀ ▶)이 항상 보이도록 */
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  stroke: currentColor;
+  color: #374151 !important; /* Tailwind ‘text-gray-700’ */
+}
+
+/* … (나머지 슬라이더 배경색, 카드 .card-inner 등 기존 CSS 그대로) … */

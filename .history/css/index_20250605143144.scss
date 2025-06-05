@@ -1,0 +1,106 @@
+/* -----------------------------------------------------
+   기존 프로젝트 전역 스타일(생략 가능한 부분) 
+   ----------------------------------------------------- */
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
+
+#event-banner {
+  background-color: #e4f6fe;
+}
+
+#event-banner > h1 {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'GmarketSansMedium', sans-serif;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  color: #413231;
+}
+
+#event-banner > h1 > span {
+  color: #EA6B6B;
+}
+
+#my_link {
+  font-family: 'Chosunilbo_myungjo', Georgia, 'Times New Roman', Times, serif !important;
+}
+
+/* -----------------------------------------------------
+   Swiper 기본 스타일 오버라이드 (페이지네이션/화살표 등)
+   ----------------------------------------------------- */
+
+/* swiper-container 내부에 overflow hidden 처리(불필요 시 제거 가능) */
+.swiper-container {
+  overflow: hidden;
+}
+
+/* 페이지네이션(숫자형) 중앙 정렬, margin 혹은 padding-top으로 아래 여백 확보 */
+.swiper-pagination {
+  display: flex !important;
+  justify-content: center;
+  padding-top: 20px !important;
+}
+
+/* 페이지네이션 숫자가 겹치지 않도록 너비를 auto + margin 적용 */
+.swiper-pagination-bullet {
+  width: auto !important;
+  height: auto !important;
+  opacity: 0.5 !important;
+  color: #999 !important;
+  margin: 0 0.5rem !important;
+  font-size: 1rem !important;
+  padding-bottom: 0.15rem !important;
+  cursor: pointer !important;
+  border-radius: 0 !important; /* 둥근 모서리 없애고 텍스트만 보이도록 */
+  background: transparent !important; /* Flowbite가 덮어쓴 배경색 제거 */
+}
+
+/* 활성 페이지네이션 */
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  color: #000 !important;
+  border-bottom: 2px solid #000 !important;
+  background: transparent !important;
+}
+
+/* 네비게이션 화살표(‹ ›) 재정의: 필요하다면 직접 SVG 스타일 추가 */
+/* 아래 코드는 Flowbite가 덮어쓰지 못하도록 우선순위를 높인 예시 */
+.swiper-button-prev,
+.swiper-button-next {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background-color: #ffffff !important;   /* 버튼 배경을 흰색으로 고정 */
+  background-opacity: 0.9 !important;
+  border: 1px solid #d1d5db !important;   /* gray-300 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 버튼 내부 svg가 파란색 Flowbite 화살표로 바뀌지 않도록 svg 색상 고정 */
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  stroke: currentColor !important;
+  color: #374151 !important;  /* text-gray-700 */
+}
+
+/* 마이너스 마진을 줄 경우, 브라우저마다 clipping 문제가 생길 수 있으므로
+   swiper-wrapper에 padding-left/right로 여백 확보를 고려할 수도 있습니다. */
