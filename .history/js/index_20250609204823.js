@@ -197,7 +197,7 @@ renderCards(currentDay, currentSort);
     tabButtons.forEach(button => {
       button.classList.remove('text-teal-400', 'border-teal-400');
       button.classList.add('text-gray-400', 'border-gray-400');
-      button.setAttribute('aria-selected', 'false'); 
+      button.setAttribute('aria-selected', 'false'); // << 모두 false로
     });
     tabPanels.forEach(panel => {
       panel.classList.add('hidden');
@@ -206,7 +206,7 @@ renderCards(currentDay, currentSort);
     // 2. 클릭된 버튼만 활성화!
     this.classList.remove('text-gray-400', 'border-gray-400');
     this.classList.add('text-teal-400', 'border-teal-400');
-    this.setAttribute('aria-selected', 'true'); 
+    this.setAttribute('aria-selected', 'true'); // 
     
     // 3. 연결된 패널만 보여주기
     const targetId = this.getAttribute('data-tabs-target');

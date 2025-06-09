@@ -187,32 +187,37 @@ renderCards(currentDay, currentSort);
 
 // 여행작가 탭 기능 ( 국내 / 해외 / 혼자 )
 
- // 탭 버튼 및 패널 셀렉터
+document.querySelectorAll('#travelTab button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // 1) 모든 버튼을 비활성(회색) 상태로 되돌림
+    document.querySelectorAll('#travelTab button').forEach(b => {
+      b.classList.remove('text-teal-400', 'border-teal-400');
+      b.classList.add('text-gray-400', 'border-gray-400');
+      b.setAttribute('aria-selected', 'false');
+    });
+    // 2) 클릭된 버튼만 활성(티얼 색상) 상태로 변경
+    btn.classList.remove('text-gray-400', 'border-gray-400');
+    btn.classList.add('text-teal-400', 'border-teal-400');
+    btn.setAttribute('aria-selected', 'true');
+  });
+});
+
+
+// ======= DOMContentLoaded 이후에 다시 한 번 안전하게 바인딩 =======
+document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll('#travelTab button');
-  const tabPanels = document.querySelectorAll('#travelTabContent > div[role="tabpanel"]');
 
-  tabButtons.forEach(btn => {
-  btn.addEventListener('click', function () {
-    // 1. 모든 버튼/패널 비활성화
-    tabButtons.forEach(button => {
-      button.classList.remove('text-teal-400', 'border-teal-400');
-      button.classList.add('text-gray-400', 'border-gray-400');
-      button.setAttribute('aria-selected', 'false'); 
-    });
-    tabPanels.forEach(panel => {
-      panel.classList.add('hidden');
-    });
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      // 1) 모든 버튼에서 기존 강조 클래스 제거
+      tabButtons.forEach((button) => {
+        button.classList.remove("text-teal-400", "border-teal-400");
+        button.classList.add("text-gray-400", "border-gray-400");
+      });
 
-    // 2. 클릭된 버튼만 활성화!
-    this.classList.remove('text-gray-400', 'border-gray-400');
-    this.classList.add('text-teal-400', 'border-teal-400');
-    this.setAttribute('aria-selected', 'true'); 
-    
-    // 3. 연결된 패널만 보여주기
-    const targetId = this.getAttribute('data-tabs-target');
-    if (targetId) {
-      const targetPanel = document.querySelector(targetId);
-      if (targetPanel) targetPanel.classList.remove('hidden');
-    }
+      // 2) 현재 클릭된 버튼에 강조 클래스 추가
+      this.classList.remove("text-gray-400", "border-gray-400");
+      this.classList.add("text-teal-400", "border-teal-400");
+    });
   });
 });

@@ -1,4 +1,6 @@
-// 메인 슬라이더
+// ======= 첫 번째 Swiper 인스턴스 (firstswiper) 초기화 =======
+// index.js
+
 document.addEventListener('DOMContentLoaded', function () {
   const firstswiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
@@ -70,9 +72,37 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// 요일별 연재 : 요일 탭 기능 , 최신순,응원순,라이킷순 정렬 기능 
+// ======= 두 번째 Swiper 인스턴스 (swiper) 초기화 =======
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,    // 기본 1개
+  spaceBetween: 16,    // 간격 16px
+  loop: false,         // 무한 루프 비활성
+
+  // 페이지네이션(dot) 설정
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  // 이전/다음 버튼
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // 반응형: 화면 크기에 따라 slidesPerView 변경
+  breakpoints: {
+    640: { slidesPerView: 2 },
+    768: { slidesPerView: 2 },
+    900: { slidesPerView: 3 },
+    1024: { slidesPerView: 3 },
+  },
+});
 
 
+
+
+
+//
 
 // 정렬 탭 버튼 클릭 시 활성화 처리
 document.querySelectorAll('#sortTab .sort-btn').forEach(btn => {
@@ -183,36 +213,3 @@ document.querySelectorAll('[data-tabs-target]').forEach(btn => {
 
 // 최초 실행
 renderCards(currentDay, currentSort);
-
-
-// 여행작가 탭 기능 ( 국내 / 해외 / 혼자 )
-
- // 탭 버튼 및 패널 셀렉터
-  const tabButtons = document.querySelectorAll('#travelTab button');
-  const tabPanels = document.querySelectorAll('#travelTabContent > div[role="tabpanel"]');
-
-  tabButtons.forEach(btn => {
-  btn.addEventListener('click', function () {
-    // 1. 모든 버튼/패널 비활성화
-    tabButtons.forEach(button => {
-      button.classList.remove('text-teal-400', 'border-teal-400');
-      button.classList.add('text-gray-400', 'border-gray-400');
-      button.setAttribute('aria-selected', 'false'); 
-    });
-    tabPanels.forEach(panel => {
-      panel.classList.add('hidden');
-    });
-
-    // 2. 클릭된 버튼만 활성화!
-    this.classList.remove('text-gray-400', 'border-gray-400');
-    this.classList.add('text-teal-400', 'border-teal-400');
-    this.setAttribute('aria-selected', 'true'); 
-    
-    // 3. 연결된 패널만 보여주기
-    const targetId = this.getAttribute('data-tabs-target');
-    if (targetId) {
-      const targetPanel = document.querySelector(targetId);
-      if (targetPanel) targetPanel.classList.remove('hidden');
-    }
-  });
-});

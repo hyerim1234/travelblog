@@ -206,7 +206,7 @@ renderCards(currentDay, currentSort);
     // 2. 클릭된 버튼만 활성화!
     this.classList.remove('text-gray-400', 'border-gray-400');
     this.classList.add('text-teal-400', 'border-teal-400');
-    this.setAttribute('aria-selected', 'true'); 
+    this.setAttribute('aria-selected', 'true'); // 
     
     // 3. 연결된 패널만 보여주기
     const targetId = this.getAttribute('data-tabs-target');

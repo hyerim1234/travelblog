@@ -511,7 +511,7 @@
 
         <!-- 카드 리스트 (국내여행 탭) -->
         <div id="domestic" role="tabpanel" aria-labelledby="domestic-tab"
-          class="max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
+          class=" max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
 
           <!-- 카드 1 -->
           <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
@@ -609,7 +609,7 @@
 
         <!-- 카드 리스트 (해외여행 탭) -->
         <div id="abroad" role="tabpanel" aria-labelledby="abroad-tab"
-          class="max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px] hidden">
+          class="hidden max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
           <!-- 카드 1 -->
           <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
             <img src="./../source/profile5.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
@@ -675,7 +675,7 @@
 
         <!-- 카드 리스트 (혼자여행 탭) -->
         <div id="solo" role="tabpanel" aria-labelledby="solo-tab"
-          class="max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px] hidden">
+          class="hidden max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
           <!-- 카드 3 -->
           <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
             <img src="./../source/profile7.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
@@ -951,6 +951,39 @@
 <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="./../js/index.js" defer></script>
+<script>
+  
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll('#travelTab button');
+  const tabPanels = document.querySelectorAll('#travelTabContent > div[role="tabpanel"]');
 
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      // 모든 버튼 비활성화
+      tabButtons.forEach((button) => {
+        button.classList.remove("text-teal-400", "border-teal-400");
+        button.classList.add("text-gray-400", "border-gray-400");
+        button.setAttribute('aria-selected', 'false');
+      });
+
+      // 현재 클릭된 버튼만 활성화
+      this.classList.remove("text-gray-400", "border-gray-400");
+      this.classList.add("text-teal-400", "border-teal-400");
+      this.setAttribute('aria-selected', 'true');
+
+      // 모든 패널 숨김
+      tabPanels.forEach(panel => panel.classList.add('hidden'));
+      // 해당 패널만 show!
+      const selector = this.getAttribute('data-tabs-target');
+      const targetPanel = document.querySelector(selector);
+      if (targetPanel) targetPanel.classList.remove('hidden');
+    });
+  });
+
+  // 페이지 진입 시 국내여행 탭 활성화
+  document.getElementById('domestic-tab').click();
+});
+
+</script>
 
 </html>
