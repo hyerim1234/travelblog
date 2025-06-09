@@ -258,8 +258,7 @@ document.querySelectorAll('#travelTab button').forEach(btn => {
 renderWriterCards('domestic');
 
 
-// RECOMMENDED ARTICLES 섹션 슬라이드 기능
-
+// RECOMMENDED ARTICLES
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,    // 기본 1개
   spaceBetween: 16,    // 간격 16px

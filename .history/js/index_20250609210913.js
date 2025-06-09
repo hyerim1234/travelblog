@@ -201,7 +201,7 @@ const writerCardsData = {
     { img: "./../source/profile7.jpg", name: "꽃돼지 후니", role: "핑거 CEO", desc: "꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…" },
     // ...추가
   ]
-};
+}
 
 function renderWriterCards(tab) {
   const tabContentMap = {
@@ -209,78 +209,37 @@ function renderWriterCards(tab) {
     abroad: document.getElementById('abroad'),
     solo: document.getElementById('solo'),
   };
-  // 모든 탭 비우고 숨김
   Object.values(tabContentMap).forEach(div => {
     div.innerHTML = '';
     div.classList.add('hidden');
   });
-  // 해당 탭만 보여주기
-  const currentDiv = tabContentMap[tab];
-  currentDiv.classList.remove('hidden');
-  // 카드 생성
+  tabContentMap[tab].classList.remove('hidden');
   (writerCardsData[tab] || []).forEach(card => {
     const html = `
-    <div class="bg-white flex flex-col justify-between h-[360px] !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
-      <div>
+      <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
         <img src="${card.img}" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
         <h4 class="text-base font-medium text-gray-900 !mt-3">${card.name}</h4>
         <p class="text-sm text-gray-500 !mt-3">${card.role}</p>
         <p class="text-xs text-gray-400 leading-relaxed !my-4">${card.desc}</p>
+        <div class="flex justify-center flex-wrap gap-2 text-sm ">
+          <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+          <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">요리</span>
+          <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+        </div>
       </div>
-      <div class="flex justify-center flex-wrap gap-2 text-sm mt-6">
-        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
-        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">요리</span>
-        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
-      </div>
-    </div> `;
-    currentDiv.insertAdjacentHTML('beforeend', html);
+    `;
+    tabContentMap[tab].insertAdjacentHTML('beforeend', html);
   });
 }
 
-// 탭 버튼 클릭 이벤트 + 스타일 처리
 document.querySelectorAll('#travelTab button').forEach(btn => {
   btn.addEventListener('click', function () {
-    // 1. 스타일 처리
-    document.querySelectorAll('#travelTab button').forEach(b => {
-      b.classList.remove('text-teal-400', 'border-teal-400');
-      b.classList.add('text-gray-400', 'border-gray-400');
-    });
-    this.classList.remove('text-gray-400', 'border-gray-400');
-    this.classList.add('text-teal-400', 'border-teal-400');
-
-    // 2. 카드 렌더링
     const tab = this.getAttribute('data-tabs-target').replace('#', '');
     renderWriterCards(tab);
   });
+
+  
 });
 
-// 첫 화면 기본값(국내여행)
+// 페이지 로드시 국내여행 탭 먼저
 renderWriterCards('domestic');
-
-
-// RECOMMENDED ARTICLES 섹션 슬라이드 기능
-
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,    // 기본 1개
-  spaceBetween: 16,    // 간격 16px
-  loop: false,         // 무한 루프 비활성
-
-  // 페이지네이션(dot) 설정
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  // 이전/다음 버튼
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // 반응형: 화면 크기에 따라 slidesPerView 변경
-  breakpoints: {
-    640: { slidesPerView: 2 },
-    768: { slidesPerView: 2 },
-    900: { slidesPerView: 3 },
-    1024: { slidesPerView: 3 },
-  },
-});

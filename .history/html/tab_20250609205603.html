@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 1) Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/index.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+</head>
+
+<body>
+    <section class="bg-[#fafafa] !mt-[146px] !pt-[100px] !pb-[80px] ">
+        <!-- 타이틀 -->
+        <div class="text-center !mb-[50px]">
+            <h3 class="text-xl tracking-[0.3em] font-medium text-gray-900 !mb-2">TRAVEL WRITERS</h3>
+            <p class="text-sm text-gray-400 !my-[15px]">브런치 추천 작가</p>
+
+            <!-- 카테고리 탭 -->
+            <ul id="travelTab" data-tabs-toggle="#travelTabContent" role="tablist"
+                class="flex justify-center gap-2 mt-10 text-sm font-medium text-center">
+
+                <li role="presentation">
+                    <button id="domestic-tab" data-tabs-target="#domestic" type="button" role="tab"
+                        aria-controls="domestic" aria-selected="true" class="cursor-pointer w-[64px] h-[28px] px-4 py-1.5 text-sm 
+                       text-teal-400  bg-white border border-teal-400 rounded-full font-light ">
+                        국내여행
+                    </button>
+                </li>
+
+                <li role="presentation">
+                    <button id="abroad-tab" data-tabs-target="#abroad" type="button" role="tab" aria-controls="abroad"
+                        aria-selected="false" class="cursor-pointer w-[64px] h-[28px] px-4 py-1.5 text-sm 
+                       text-gray-400 bg-white border border-gray-400 rounded-full font-light">
+                        해외여행
+                    </button>
+                </li>
+
+                <li role="presentation">
+                    <button id="solo-tab" data-tabs-target="#solo" type="button" role="tab" aria-controls="solo"
+                        aria-selected="false" class="cursor-pointer w-[64px] h-[28px] px-4 py-1.5 text-sm 
+                       text-gray-400 bg-white border border-gray-400 rounded-full font-light">
+                        혼자 여행
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 탭 콘텐츠 래퍼 -->
+        <div id="travelTabContent" class="max-w-6xl !mx-auto !px-4">
+
+            <!-- 카드 리스트 (국내여행 탭) -->
+            <div id="domestic" role="tabpanel" aria-labelledby="domestic-tab"
+                class="max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px]">
+
+                <!-- 카드 1 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
+                    <img src="./../source/profile1.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3">김고로123</h4>
+                    <p class="text-sm text-gray-500 !mt-3">미식 큐레이터</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        Taste Curator & Gourmet Lover of Gangneung. 인생은 순정이다. 식문화를 수집하며 사는 중입니다.
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 2 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile2.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3">케니스트리</h4>
+                    <p class="text-sm text-gray-500 !mt-3">에세이스트</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        글 쓰는 마케터 입니다. <br />
+                        필요하다면 이 문단의 높이를 고정(min‐h‐XX)하거나 overflow‐ellipsis 처리를 해도 좋습니다.
+                    </p>
+
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 3 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile3.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3"> 꽃돼지 후니</h4>
+                    <p class="text-sm text-gray-500 !mt-3">핑거 CEO</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4 overflow‐ellipsis ">
+                        꽃돼지 후니는
+                        이 문단의 높이를 고정(min‐h‐XX)하거나 overflow‐ellipsis 처리를 해도 좋습니다.
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 4 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile2.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3"> 태화강그대</h4>
+                    <p class="text-sm text-gray-500 !mt-3">주부</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        2번의 암수술을 하고 제2의 인생을 울산에서 시작했습니다. 삶을 제대로 살아보려 애쓰는 중입니다.
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 5 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile2.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3">지식농부</h4>
+                    <p class="text-sm text-gray-500 !mt-3">출간작가</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        ‘오늘, 남편이 퇴직했습니다’ 작가, OK지식나눔연구소 소장, 퇴직강사, 분노조절강사 등…
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 6 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile4.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3">작은콩</h4>
+                    <p class="text-sm text-gray-500 !mt-3">일러스트레이터</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        희소병 환자로 살아가며, 느리지만 꾸준한 삶의 기록을 글과 그림으로 남깁니다.
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 카드 리스트 (해외여행 탭) -->
+            <div id="abroad" role="tabpanel" aria-labelledby="abroad-tab"
+                class="max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px] hidden">
+                <!-- 카드 1 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center">
+                    <img src="./../source/profile5.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3">김고로</h4>
+                    <p class="text-sm text-gray-500 !mt-3">미식 큐레이터</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        Taste Curator & Gourmet Lover of Gangneung. 인생은 순정이다. 식문화를 수집하며 사는 중입니다.
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 2 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile6.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3">케니스트리</h4>
+                    <p class="text-sm text-gray-500 !mt-3">에세이스트</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        글 쓰는 마케터 입니다.
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 3 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile8.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3"> 꽃돼지 후니</h4>
+                    <p class="text-sm text-gray-500 !mt-3">핑거 CEO</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 4 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile7.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3"> 태화강그대</h4>
+                    <p class="text-sm text-gray-500 !mt-3">주부</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        2번의 암수술을 하고 제2의 인생을 울산에서 시작했습니다. 삶을 제대로 살아보려 애쓰는 중입니다.
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 카드 리스트 (혼자여행 탭) -->
+            <div id="solo" role="tabpanel" aria-labelledby="solo-tab"
+                class="max-w-6xl !mx-auto !px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 !mt-[50px] hidden">
+                <!-- 카드 3 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile7.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3"> 꽃돼지 후니</h4>
+                    <p class="text-sm text-gray-500 !mt-3">핑거 CEO</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 4 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile7.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3"> 태화강그대</h4>
+                    <p class="text-sm text-gray-500 !mt-3">주부</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        2번의 암수술을 하고 제2의 인생을 울산에서 시작했습니다. 삶을 제대로 살아보려 애쓰는 중입니다.
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 5 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile7.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3">지식농부</h4>
+                    <p class="text-sm text-gray-500 !mt-3">출간작가</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        ‘오늘, 남편이 퇴직했습니다’ 작가, OK지식나눔연구소 소장, 퇴직강사, 분노조절강사 등…
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+
+                <!-- 카드 6 -->
+                <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
+                    <img src="./../source/profile7.jpg" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
+                    <h4 class="text-base font-medium text-gray-900 !mt-3">작은콩</h4>
+                    <p class="text-sm text-gray-500 !mt-3">일러스트레이터</p>
+                    <p class="text-xs text-gray-400 leading-relaxed !my-4">
+                        희소병 환자로 살아가며, 느리지만 꾸준한 삶의 기록을 글과 그림으로 남깁니다.
+                    </p>
+                    <div class="flex justify-center flex-wrap gap-2 text-sm ">
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full ">요리</span>
+                        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+</body>
+    <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</html>

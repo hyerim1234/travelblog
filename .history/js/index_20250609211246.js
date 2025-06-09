@@ -186,101 +186,26 @@ renderCards(currentDay, currentSort);
 
 
 // 여행작가 탭 기능 ( 국내 / 해외 / 혼자 )
-const writerCardsData = {
-  domestic: [
-    { img: "./../source/profile1.jpg", name: "김고로123", role: "미식 큐레이터", desc: "Taste Curator & Gourmet Lover of Gangneung. 인생은 순정이다. 식문화를 수집하며 사는 중입니다." },
-    { img: "./../source/profile2.jpg", name: "케니스트리", role: "에세이스트", desc: "글 쓰는 마케터 입니다." },
-    // ...추가
-  ],
-  abroad: [
-    { img: "./../source/profile5.jpg", name: "김고로", role: "미식 큐레이터", desc: "Taste Curator & Gourmet Lover of Gangneung. 인생은 순정이다. 식문화를 수집하며 사는 중입니다." },
-    { img: "./../source/profile6.jpg", name: "케니스트리", role: "에세이스트", desc: "글 쓰는 마케터 입니다." },
-    // ...추가
-  ],
-  solo: [
-    { img: "./../source/profile7.jpg", name: "꽃돼지 후니", role: "핑거 CEO", desc: "꽃돼지 후니는 예전에는 꽃미남으로 불리웠는데 주변에 좋은 사람,음식,술,풍경 등으로 인해…" },
-    // ...추가
-  ]
-};
-
-function renderWriterCards(tab) {
-  const tabContentMap = {
-    domestic: document.getElementById('domestic'),
-    abroad: document.getElementById('abroad'),
-    solo: document.getElementById('solo'),
-  };
-  // 모든 탭 비우고 숨김
-  Object.values(tabContentMap).forEach(div => {
-    div.innerHTML = '';
-    div.classList.add('hidden');
-  });
-  // 해당 탭만 보여주기
-  const currentDiv = tabContentMap[tab];
-  currentDiv.classList.remove('hidden');
-  // 카드 생성
-  (writerCardsData[tab] || []).forEach(card => {
-    const html = `
-    <div class="bg-white flex flex-col justify-between h-[360px] !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
-      <div>
-        <img src="${card.img}" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
-        <h4 class="text-base font-medium text-gray-900 !mt-3">${card.name}</h4>
-        <p class="text-sm text-gray-500 !mt-3">${card.role}</p>
-        <p class="text-xs text-gray-400 leading-relaxed !my-4">${card.desc}</p>
-      </div>
-      <div class="flex justify-center flex-wrap gap-2 text-sm mt-6">
-        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
-        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">요리</span>
-        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
-      </div>
-    </div> `;
-    currentDiv.insertAdjacentHTML('beforeend', html);
-  });
-}
-
-// 탭 버튼 클릭 이벤트 + 스타일 처리
+// 여행작가 탭 확인용 코드
 document.querySelectorAll('#travelTab button').forEach(btn => {
   btn.addEventListener('click', function () {
-    // 1. 스타일 처리
+    // 탭 이름(버튼 내용) 찍기
+    console.log('여행작가 탭 클릭:', this.textContent.trim());
+    alert('여행작가 탭 클릭: ' + this.textContent.trim());
+
+    // 기존 탭 숨기고, 선택된 탭 보여주기 (탭 기능도 활성화)
+    document.querySelectorAll('#travelTabContent > div[role="tabpanel"]').forEach(tabContent => {
+      tabContent.classList.add('hidden');
+    });
+    const targetId = this.getAttribute('data-tabs-target');
+    document.querySelector(targetId).classList.remove('hidden');
+
+    // 버튼 활성화/비활성화 스타일 처리 (선택사항)
     document.querySelectorAll('#travelTab button').forEach(b => {
       b.classList.remove('text-teal-400', 'border-teal-400');
       b.classList.add('text-gray-400', 'border-gray-400');
     });
     this.classList.remove('text-gray-400', 'border-gray-400');
     this.classList.add('text-teal-400', 'border-teal-400');
-
-    // 2. 카드 렌더링
-    const tab = this.getAttribute('data-tabs-target').replace('#', '');
-    renderWriterCards(tab);
   });
-});
-
-// 첫 화면 기본값(국내여행)
-renderWriterCards('domestic');
-
-
-// RECOMMENDED ARTICLES 섹션 슬라이드 기능
-
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,    // 기본 1개
-  spaceBetween: 16,    // 간격 16px
-  loop: false,         // 무한 루프 비활성
-
-  // 페이지네이션(dot) 설정
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  // 이전/다음 버튼
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // 반응형: 화면 크기에 따라 slidesPerView 변경
-  breakpoints: {
-    640: { slidesPerView: 2 },
-    768: { slidesPerView: 2 },
-    900: { slidesPerView: 3 },
-    1024: { slidesPerView: 3 },
-  },
 });

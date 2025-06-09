@@ -232,7 +232,8 @@ function renderWriterCards(tab) {
         <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">요리</span>
         <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
       </div>
-    </div> `;
+  </div>
+    `;
     currentDiv.insertAdjacentHTML('beforeend', html);
   });
 }
@@ -257,30 +258,3 @@ document.querySelectorAll('#travelTab button').forEach(btn => {
 // 첫 화면 기본값(국내여행)
 renderWriterCards('domestic');
 
-
-// RECOMMENDED ARTICLES 섹션 슬라이드 기능
-
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,    // 기본 1개
-  spaceBetween: 16,    // 간격 16px
-  loop: false,         // 무한 루프 비활성
-
-  // 페이지네이션(dot) 설정
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  // 이전/다음 버튼
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // 반응형: 화면 크기에 따라 slidesPerView 변경
-  breakpoints: {
-    640: { slidesPerView: 2 },
-    768: { slidesPerView: 2 },
-    900: { slidesPerView: 3 },
-    1024: { slidesPerView: 3 },
-  },
-});

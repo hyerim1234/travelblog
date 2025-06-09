@@ -220,19 +220,18 @@ function renderWriterCards(tab) {
   // 카드 생성
   (writerCardsData[tab] || []).forEach(card => {
     const html = `
-    <div class="bg-white flex flex-col justify-between h-[360px] !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
-      <div>
+      <div class="bg-white !px-6 !py-8 rounded-lg shadow-sm text-center w-full">
         <img src="${card.img}" alt="avatar" class="w-24 h-24 mx-auto rounded-full mb-4" />
         <h4 class="text-base font-medium text-gray-900 !mt-3">${card.name}</h4>
-        <p class="text-sm text-gray-500 !mt-3">${card.role}</p>
-        <p class="text-xs text-gray-400 leading-relaxed !my-4">${card.desc}</p>
+        <p class="text-sm text-gray-500 !mt-3">${card.role}123</p>
+        <p class="text-xs text-gray-400 leading-relaxed !my-4">${card.desc}ㄹㄹㄹ</p>
+        <div class="flex justify-center flex-wrap gap-2 text-sm ">
+          <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
+          <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">요리</span>
+          <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
+        </div>
       </div>
-      <div class="flex justify-center flex-wrap gap-2 text-sm mt-6">
-        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">문화</span>
-        <span class="!px-4 !py-4 bg-gray-100 text-gray-500 rounded-full">요리</span>
-        <span class="!px-4 !py-4 bg-gray-100 text-gray-400 rounded-full">···</span>
-      </div>
-    </div> `;
+    `;
     currentDiv.insertAdjacentHTML('beforeend', html);
   });
 }
@@ -257,30 +256,3 @@ document.querySelectorAll('#travelTab button').forEach(btn => {
 // 첫 화면 기본값(국내여행)
 renderWriterCards('domestic');
 
-
-// RECOMMENDED ARTICLES 섹션 슬라이드 기능
-
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,    // 기본 1개
-  spaceBetween: 16,    // 간격 16px
-  loop: false,         // 무한 루프 비활성
-
-  // 페이지네이션(dot) 설정
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  // 이전/다음 버튼
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // 반응형: 화면 크기에 따라 slidesPerView 변경
-  breakpoints: {
-    640: { slidesPerView: 2 },
-    768: { slidesPerView: 2 },
-    900: { slidesPerView: 3 },
-    1024: { slidesPerView: 3 },
-  },
-});
