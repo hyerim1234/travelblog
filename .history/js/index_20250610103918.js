@@ -50,9 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       1280: { slidesPerView: 3, slidesPerGroup: 3 },
       1024: { slidesPerView: 2, slidesPerGroup: 2 },
-      640: { slidesPerView: 2, slidesPerGroup: 2 },
-      500: { slidesPerView: 1, slidesPerGroup: 1 },
-      375: { slidesPerView: 1, slidesPerGroup: 1 },
+      640: { slidesPerView: 1, slidesPerGroup: 1 },
     },
   });
 
@@ -97,37 +95,21 @@ const readyDays = ['thu', 'fri', 'sat', 'sun']; // 준비중 요일
 
 const contentsData = {
   mon: [
-    { title: '도쿄, 새벽 산책의 기록', author: '트래블러민', category: '해외여행 에세이', img: 'tokyo.jpg', like: 32, support: 5, date: '2025-06-10' },
-    { title: '제주도 숨은 여행지 5곳', author: '여행하나', category: '국내여행 추천', img: 'jeju.jpg', like: 28, support: 2, date: '2025-06-03' },
-    { title: '한 달 살기 준비 체크리스트', author: '유랑단', category: '여행 꿀팁', img: 'month.jpg', like: 14, support: 1, date: '2025-05-29' },
-    { title: '부산 카페 투어일기', author: '에디터소라', category: '감성 여행', img: 'busan_cafe.jpg', like: 12, support: 4, date: '2025-05-22' },
+    { title: '나는, 비둘기1', author: '부산우', category: '마흔에 읽는 그림책', img: 'img3.jpg', like: 15, support: 1, date: '2024-05-01' },
+    { title: '나는, 비둘기2', author: '부산우', category: '마흔에 읽는 그림책', img: 'img4.jpg', like: 5, support: 3, date: '2024-04-01' },
+    { title: '나는, 비둘기3', author: '부산우', category: '마흔에 읽는 그림책', img: 'img5.jpg', like: 25, support: 2, date: '2024-03-01' },
+    { title: '나는, 비둘기4', author: '부산우', category: '마흔에 읽는 그림책', img: 'img6.jpg', like: 7, support: 4, date: '2024-02-01' },
   ],
   tue: [
-    { title: '아이슬란드 자연사진 베스트', author: '밤하늘사진가', category: '여행 사진', img: 'img_iceland.jpg', like: 41, support: 3, date: '2025-06-08' },
-    { title: '서울 근교 드라이브 코스', author: '룰루트립', category: '드라이브 여행', img: 'seoul_drive.jpg', like: 21, support: 2, date: '2025-06-01' },
+    { title: '나는, 비둘기5', author: '부산우', category: '마흔에 읽는 그림책', img: 'img5.jpg', like: 30, support: 1, date: '2024-06-02' },
   ],
   wed: [
-    { title: '로컬 맛집 지도 – 전주편', author: '맛집탐험대', category: '여행 맛집', img: 'img_jeonju.jpg', like: 17, support: 1, date: '2025-05-27' },
-    { title: '방콕 시장 탐방기', author: '지구정복자', category: '해외여행', img: 'img_bangkok.jpg', like: 18, support: 2, date: '2025-05-25' },
-    { title: '가을 감성, 남도 여행', author: '여행하루', category: '국내여행 에세이', img: 'img_namdo.jpg', like: 9, support: 2, date: '2025-05-21' },
-    { title: '반려동물과 함께한 캠핑', author: '달밤캠핑', category: '캠핑 여행', img: 'img_camping.jpg', like: 7, support: 1, date: '2025-05-15' },
+    { title: '나는, 비둘기1', author: '부산우', category: '마흔에 읽는 그림책', img: 'img3.jpg', like: 15, support: 1, date: '2024-05-01' },
+    { title: '나는, 비둘기2', author: '부산우', category: '마흔에 읽는 그림책', img: 'img4.jpg', like: 5, support: 3, date: '2024-04-01' },
+    { title: '나는, 비둘기3', author: '부산우', category: '마흔에 읽는 그림책', img: 'img5.jpg', like: 25, support: 2, date: '2024-03-01' },
+    { title: '나는, 비둘기4', author: '부산우', category: '마흔에 읽는 그림책', img: 'img6.jpg', like: 7, support: 4, date: '2024-02-01' },
   ],
-  thu: [
-    { title: '여름방학 유럽 기차여행', author: '열차소년', category: '유럽 여행', img: 'img_europe.jpg', like: 26, support: 5, date: '2025-06-06' },
-    { title: '호캉스 제대로 즐기는 법', author: '여행연구소', category: '숙소 여행', img: 'img_hotel.jpg', like: 10, support: 2, date: '2025-05-31' },
-  ],
-  fri: [
-    { title: 'SNS 핫플 BEST10', author: '핫플에디터', category: '핫플레이스', img: 'img_hotplace.jpg', like: 37, support: 7, date: '2025-06-07' },
-    { title: '친구와 가는 감성 로드트립', author: '함께걷기', category: '로드트립', img: 'img_road.jpg', like: 22, support: 1, date: '2025-06-03' },
-  ],
-  sat: [
-    { title: '반려견과 전국 캠핑장', author: '견생여행', category: '반려동물 여행', img: 'img_pet.jpg', like: 13, support: 2, date: '2025-05-30' },
-    { title: '세계의 축제 체험기', author: '페스티벌러버', category: '문화여행', img: 'img_festival.jpg', like: 19, support: 3, date: '2025-05-22' },
-  ],
-  sun: [
-    { title: '여행 에세이 – 다시 떠나는 이유', author: '비긴어게인', category: '감성 에세이', img: 'img_essay.jpg', like: 25, support: 4, date: '2025-06-09' },
-    { title: '사진으로 만나는 아시아', author: '여행사진가', category: '여행 사진', img: 'img_asia.jpg', like: 15, support: 2, date: '2025-06-02' },
-  ],
+  // 나머지 요일은 생략 가능 (readyDays로 처리)
 };
 
 let currentDay = 'mon';    // 초기 탭(월요일)
@@ -161,7 +143,7 @@ function renderCards(day, sortType) {
 
   sorted.forEach(item => {
     const html = `
-      <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 cursor-pointer">
+      <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26">
         <div class="flex-1">
           <p class="text-xs text-gray-400">${item.category}</p>
           <p class="font-medium text-gray-800 text-sm !my-2">${item.title}</p>

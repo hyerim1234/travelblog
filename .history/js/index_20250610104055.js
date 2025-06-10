@@ -50,9 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       1280: { slidesPerView: 3, slidesPerGroup: 3 },
       1024: { slidesPerView: 2, slidesPerGroup: 2 },
-      640: { slidesPerView: 2, slidesPerGroup: 2 },
-      500: { slidesPerView: 1, slidesPerGroup: 1 },
-      375: { slidesPerView: 1, slidesPerGroup: 1 },
+      640: { slidesPerView: 1, slidesPerGroup: 1 },
     },
   });
 
@@ -97,20 +95,20 @@ const readyDays = ['thu', 'fri', 'sat', 'sun']; // 준비중 요일
 
 const contentsData = {
   mon: [
-    { title: '도쿄, 새벽 산책의 기록', author: '트래블러민', category: '해외여행 에세이', img: 'tokyo.jpg', like: 32, support: 5, date: '2025-06-10' },
-    { title: '제주도 숨은 여행지 5곳', author: '여행하나', category: '국내여행 추천', img: 'jeju.jpg', like: 28, support: 2, date: '2025-06-03' },
-    { title: '한 달 살기 준비 체크리스트', author: '유랑단', category: '여행 꿀팁', img: 'month.jpg', like: 14, support: 1, date: '2025-05-29' },
-    { title: '부산 카페 투어일기', author: '에디터소라', category: '감성 여행', img: 'busan_cafe.jpg', like: 12, support: 4, date: '2025-05-22' },
+    { title: '도쿄, 새벽 산책의 기록', author: '트래블러민', category: '해외여행 에세이', img: '/Users/ganghyelim/Desktop/여행블로그/source/tokyo.jpg', like: 32, support: 5, date: '2025-06-10' },
+    { title: '제주도 숨은 여행지 5곳', author: '여행하나', category: '국내여행 추천', img: 'img_jeju.jpg', like: 28, support: 2, date: '2025-06-03' },
+    { title: '한 달 살기 준비 체크리스트', author: '유랑단', category: '여행 꿀팁', img: 'img_month.jpg', like: 14, support: 1, date: '2025-05-29' },
+    { title: '부산 카페 투어일기', author: '에디터소라', category: '감성 여행', img: 'img_cafe.jpg', like: 12, support: 4, date: '2025-05-22' },
   ],
   tue: [
     { title: '아이슬란드 자연사진 베스트', author: '밤하늘사진가', category: '여행 사진', img: 'img_iceland.jpg', like: 41, support: 3, date: '2025-06-08' },
-    { title: '서울 근교 드라이브 코스', author: '룰루트립', category: '드라이브 여행', img: 'seoul_drive.jpg', like: 21, support: 2, date: '2025-06-01' },
+    { title: '서울 근교 드라이브 코스', author: '룰루트립', category: '드라이브 여행', img: 'img_drive.jpg', like: 21, support: 2, date: '2025-06-01' },
   ],
   wed: [
     { title: '로컬 맛집 지도 – 전주편', author: '맛집탐험대', category: '여행 맛집', img: 'img_jeonju.jpg', like: 17, support: 1, date: '2025-05-27' },
     { title: '방콕 시장 탐방기', author: '지구정복자', category: '해외여행', img: 'img_bangkok.jpg', like: 18, support: 2, date: '2025-05-25' },
     { title: '가을 감성, 남도 여행', author: '여행하루', category: '국내여행 에세이', img: 'img_namdo.jpg', like: 9, support: 2, date: '2025-05-21' },
-    { title: '반려동물과 함께한 캠핑', author: '달밤캠핑', category: '캠핑 여행', img: 'img_camping.jpg', like: 7, support: 1, date: '2025-05-15' },
+    { title: '반려동물과 함께한 캠핑', author: '달밤캠핑', category: '캠핑 여행', img: 'img_petcamp.jpg', like: 7, support: 1, date: '2025-05-15' },
   ],
   thu: [
     { title: '여름방학 유럽 기차여행', author: '열차소년', category: '유럽 여행', img: 'img_europe.jpg', like: 26, support: 5, date: '2025-06-06' },
@@ -161,7 +159,7 @@ function renderCards(day, sortType) {
 
   sorted.forEach(item => {
     const html = `
-      <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 cursor-pointer">
+      <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26">
         <div class="flex-1">
           <p class="text-xs text-gray-400">${item.category}</p>
           <p class="font-medium text-gray-800 text-sm !my-2">${item.title}</p>

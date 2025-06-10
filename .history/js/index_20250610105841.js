@@ -50,9 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       1280: { slidesPerView: 3, slidesPerGroup: 3 },
       1024: { slidesPerView: 2, slidesPerGroup: 2 },
-      640: { slidesPerView: 2, slidesPerGroup: 2 },
-      500: { slidesPerView: 1, slidesPerGroup: 1 },
-      375: { slidesPerView: 1, slidesPerGroup: 1 },
+      640: { slidesPerView: 1, slidesPerGroup: 1 },
     },
   });
 
@@ -161,7 +159,7 @@ function renderCards(day, sortType) {
 
   sorted.forEach(item => {
     const html = `
-      <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 cursor-pointer">
+      <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26">
         <div class="flex-1">
           <p class="text-xs text-gray-400">${item.category}</p>
           <p class="font-medium text-gray-800 text-sm !my-2">${item.title}</p>

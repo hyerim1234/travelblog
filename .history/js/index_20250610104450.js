@@ -50,9 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       1280: { slidesPerView: 3, slidesPerGroup: 3 },
       1024: { slidesPerView: 2, slidesPerGroup: 2 },
-      640: { slidesPerView: 2, slidesPerGroup: 2 },
-      500: { slidesPerView: 1, slidesPerGroup: 1 },
-      375: { slidesPerView: 1, slidesPerGroup: 1 },
+      640: { slidesPerView: 1, slidesPerGroup: 1 },
     },
   });
 
@@ -104,13 +102,13 @@ const contentsData = {
   ],
   tue: [
     { title: '아이슬란드 자연사진 베스트', author: '밤하늘사진가', category: '여행 사진', img: 'img_iceland.jpg', like: 41, support: 3, date: '2025-06-08' },
-    { title: '서울 근교 드라이브 코스', author: '룰루트립', category: '드라이브 여행', img: 'seoul_drive.jpg', like: 21, support: 2, date: '2025-06-01' },
+    { title: '서울 근교 드라이브 코스', author: '룰루트립', category: '드라이브 여행', img: 'img_drive.jpg', like: 21, support: 2, date: '2025-06-01' },
   ],
   wed: [
     { title: '로컬 맛집 지도 – 전주편', author: '맛집탐험대', category: '여행 맛집', img: 'img_jeonju.jpg', like: 17, support: 1, date: '2025-05-27' },
     { title: '방콕 시장 탐방기', author: '지구정복자', category: '해외여행', img: 'img_bangkok.jpg', like: 18, support: 2, date: '2025-05-25' },
     { title: '가을 감성, 남도 여행', author: '여행하루', category: '국내여행 에세이', img: 'img_namdo.jpg', like: 9, support: 2, date: '2025-05-21' },
-    { title: '반려동물과 함께한 캠핑', author: '달밤캠핑', category: '캠핑 여행', img: 'img_camping.jpg', like: 7, support: 1, date: '2025-05-15' },
+    { title: '반려동물과 함께한 캠핑', author: '달밤캠핑', category: '캠핑 여행', img: 'img_petcamp.jpg', like: 7, support: 1, date: '2025-05-15' },
   ],
   thu: [
     { title: '여름방학 유럽 기차여행', author: '열차소년', category: '유럽 여행', img: 'img_europe.jpg', like: 26, support: 5, date: '2025-06-06' },
@@ -161,7 +159,7 @@ function renderCards(day, sortType) {
 
   sorted.forEach(item => {
     const html = `
-      <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26 cursor-pointer">
+      <div class="flex gap-4 bg-white !p-[20px] rounded shadow-sm w-full sm:w-[400px] md:w-[350px] h-26">
         <div class="flex-1">
           <p class="text-xs text-gray-400">${item.category}</p>
           <p class="font-medium text-gray-800 text-sm !my-2">${item.title}</p>

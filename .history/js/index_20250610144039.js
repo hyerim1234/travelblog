@@ -49,10 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     breakpoints: {
       1280: { slidesPerView: 3, slidesPerGroup: 3 },
-      1024: { slidesPerView: 2, slidesPerGroup: 2 },
-      640: { slidesPerView: 2, slidesPerGroup: 2 },
-      500: { slidesPerView: 1, slidesPerGroup: 1 },
-      375: { slidesPerView: 1, slidesPerGroup: 1 },
+  1024: { slidesPerView: 2, slidesPerGroup: 2 },
+  640: { slidesPerView: 1, slidesPerGroup: 1 },
+  500: { slidesPerView: 1, slidesPerGroup: 1 },
+  375: { slidesPerView: 1, slidesPerGroup: 1 },
     },
   });
 
