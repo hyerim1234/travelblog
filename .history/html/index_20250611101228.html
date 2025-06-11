@@ -20,39 +20,40 @@
 
 <body>
   <!-- 상단 배너 -->
-<div id="event-banner" class="bg-[#fbeee1] w-full min-w-0">
-  <div class="mx-auto flex items-center justify-center 
+  <div id="event-banner" class="bg-[#fbeee1] w-full min-w-0">
+    <div class="mx-auto flex items-center justify-center 
     h-[38px] sm:h-[46px] px-2">
-    <span class="font-bold text-[15px] sm:text-[26px] tracking-tight text-[#3c312b] leading-[38px] sm:leading-[46px] whitespace-nowrap">
-      대상 국무총리상 시상
-      <span class="text-[#ef7c7c] font-bold">2025 저작권 글 공모전</span>
-      2025.4.23 - 6.15
-    </span>
+      <span
+        class="font-bold text-[15px] sm:text-[26px] tracking-tight text-[#3c312b] leading-[38px] sm:leading-[46px] whitespace-nowrap">
+        대상 국무총리상 시상
+        <span class="text-[#ef7c7c] font-bold">2025 저작권 글 공모전</span>
+        2025.4.23 - 6.15
+      </span>
+    </div>
   </div>
-</div>
 
-<!-- 네비게이션 바(모바일 대응) -->
-<header class="h-[56px] bg-white border-b border-gray-100">
-  <nav class="flex items-center justify-between px-2 sm:px-6 h-full">
-    <!-- 왼쪽: 햄버거 + 로고 -->
-    <div class="flex items-center gap-2">
-      <button type="button" class="p-2">
-        <!-- 햄버거 아이콘 -->
-        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <a href="./index.html" class="text-lg font-bold" style="line-height: 38px;">Travel</a>
-    </div>
-    <!-- 가운데/오른쪽: 텍스트 + 검색 아이콘 -->
-    <div class="flex items-center gap-1">
-      <button type="button" class="hidden sm:inline-block text-[15px] font-normal text-gray-600 px-2 py-1">
-        여행 기록 시작하기
-      </button>
-      <img src="./../source/search_ic.png" alt="검색" class="w-7 h-7 ml-2" />
-    </div>
-  </nav>
-</header>
+  <!-- 네비게이션 바(모바일 대응) -->
+  <header class="h-[56px] bg-white border-b border-gray-100">
+    <nav class="flex items-center justify-between px-2 sm:px-6 h-full">
+      <!-- 왼쪽: 햄버거 + 로고 -->
+      <div class="flex items-center gap-2">
+        <button type="button" class="p-2">
+          <!-- 햄버거 아이콘 -->
+          <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <a href="./index.html" class="text-lg font-bold" style="line-height: 38px;">Travel</a>
+      </div>
+      <!-- 가운데/오른쪽: 텍스트 + 검색 아이콘 -->
+      <div class="flex items-center gap-1">
+        <button type="button" class="hidden sm:inline-block text-[15px] font-normal text-gray-600 px-2 py-1">
+          여행 기록 시작하기
+        </button>
+        <img src="./../source/search_ic.png" alt="검색" class="w-7 h-7 ml-2" />
+      </div>
+    </nav>
+  </header>
 
 
 
@@ -289,120 +290,126 @@
 
 
 
-    <section class="!mt-[155px] px-4 ">
-      <h3 class="text-center font-light text-2xl tracking-[0.5em] !mb-[50px]">
+    <section class="mt-24 px-4">
+      <h3 class="text-center font-light text-2xl tracking-[0.5em] mb-12">
         TRAVELKEYWORD
       </h3>
 
-      <div class="w-full overflow-x-auto">
-        <div class="grid grid-cols-8 box-border min-w-[690px] max-w-5xl mx-auto">
-          <!-- === 1행 === -->
+      <div class="w-full max-w-5xl mx-auto">
+        <div class="
+      grid grid-cols-2 gap-3
+      sm:grid-cols-4 sm:gap-4
+      lg:grid-cols-8
+      ">
+          <!-- 1열 x 1 -->
           <div
-            class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            지구한바퀴<br />세계여행
-          </div>
-
-          <div
-            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            혼자 떠나는 <br />나홀로 여행
-          </div>
-
-          <div
-            class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-sm border-t border-l border-gray-200 bg-white">
-            여행 사진<br />감성 필름
-          </div>
-
-          <div
-            class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            가족과<br />함께 여행
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            지구한바퀴<br>세계여행
           </div>
           <div
-            class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            인생 카페<br />& 맛집 지도
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            혼자 떠나는<br>나홀로 여행
           </div>
           <div
-            class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            친구와<br />우정 여행
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            여행 사진<br>감성 필름
           </div>
           <div
-            class="relative w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            감성<br />로드트립
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            가족과<br>함께 여행
+          </div>
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            인생 카페<br>& 맛집 지도
+          </div>
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            친구와<br>우정 여행
+          </div>
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            감성<br>로드트립
             <span
-              class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
+              class="absolute top-2 right-2 text-[12px] text-white bg-teal-500 rounded-full w-6 h-6 flex items-center justify-center font-bold">N</span>
           </div>
           <div
-            class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-r border-gray-200 bg-white">
-            세계의<br />문화·축제
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            세계의<br>문화·축제
           </div>
-
           <!-- === 2행 === -->
-          <div    class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            한 달 살기<br />로망 실현
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            한 달 살기<br>로망 실현
           </div>
-          <div  class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            국내 소도시<br />탐방
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            국내 소도시<br>탐방
           </div>
-          <div  class="relative w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            캠핑 &<br />차박 여행
-            <span  class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            캠핑 &<br>차박 여행
+            <span
+              class="absolute top-2 right-2 text-[12px] text-white bg-teal-500 rounded-full w-6 h-6 flex items-center justify-center font-bold">N</span>
           </div>
-         
-          <div  class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            계절별<br />여행 추천
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            계절별<br>여행 추천
           </div>
-          
-          <div  class="w-full h-28 flex items-center justify-center text-center text-gray-700 text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            로컬<br />페스티벌
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            로컬<br>페스티벌
           </div>
-          
-          <div   class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            여행 꿀팁<br />& 준비물
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            여행 꿀팁<br>& 준비물
           </div>
-          
-          <div  class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-gray-200 bg-white">
-            반려동물과<br />함께
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            반려동물과<br>함께
           </div>
-          
-          <div  class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-r border-gray-200 bg-white">
-            바다/산/호수<br />자연 여행
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            바다/산/호수<br>자연 여행
           </div>
-
           <!-- === 3행 === -->
-          <div   class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-b border-gray-200 bg-white">
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
             여행 에세이
           </div>
-          
-          <div  class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-b border-gray-200 bg-white">
-            인생 숙소<br />& 호텔
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            인생 숙소<br>& 호텔
           </div>
-          
-          <div class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-b border-gray-200 bg-white">
-            여행지<br />이색 체험
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            여행지<br>이색 체험
           </div>
-          
-          <div class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-b border-gray-200 bg-white">
-            여행 루트<br />& 코스 추천
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            여행 루트<br>& 코스 추천
           </div>
-          
-          <div class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-b border-gray-200 bg-white">
-            세계의<br />문화·축제
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            세계의<br>문화·축제
           </div>
-          
-          <div  class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-b border-gray-200 bg-white">
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
             여행 브이로그
           </div>
-          
-          <div class="w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-b border-gray-200 bg-white">
-            SNS 핫플<br />투어
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            SNS 핫플<br>투어
           </div>
-          
-          <div class="relative w-full h-28 flex items-center justify-center text-center text-gray-700  text-xs sm:text-sm border-t border-l border-r border-b border-gray-200 bg-white">
-            액티비티<br />도전기
-            <span  class="absolute top-1 right-1 text-[10px] text-white bg-teal-500 rounded-full w-5 h-5 leading-5 font-bold">N</span>
+          <div
+            class="relative bg-white rounded-2xl shadow flex items-center justify-center min-h-[80px] px-2 py-6 text-center text-gray-800 text-base font-medium break-keep">
+            액티비티<br>도전기
+            <span
+              class="absolute top-2 right-2 text-[12px] text-white bg-teal-500 rounded-full w-6 h-6 flex items-center justify-center font-bold">N</span>
           </div>
         </div>
       </div>
     </section>
+
 
 
 
@@ -869,83 +876,84 @@
 
 
 
- <footer class="bg-gray-900 text-gray-400">
-  <div class="max-w-screen-xl !mx-auto !px-4 !py-16">
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-screen-xl !mx-auto !px-4 !py-16">
 
-    <!-- 상단 그리드 -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      <!-- 상단 그리드 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
 
-      <!-- 1) 로고 + 여행 인용문 -->
-      <div class="!space-y-2">
-        <a href="#" class="inline-block">
-          <img src="./../source/playstore_ic.png" alt="Travel Logo" class="w-8 h-8" />
-        </a>
-        <p class="text-white italic font-light">
-          The world is a book,<br />and those who do not travel<br />read only one page.
-        </p>
-        <p class="text-sm text-gray-500">Saint Augustine</p>
-      </div>
-
-      <!-- 2) 여행 서비스 안내 -->
-      <div>
-        <h3 class="!mb-4 text-sm font-semibold text-white uppercase">여행 플랫폼 이용안내</h3>
-        <ul class="!space-y-2 sm:text-xs">
-          <li><a href="#" class="hover:text-white">여행 작가 신청</a></li>
-          <li><a href="#" class="hover:text-white">여행 콘텐츠 제안</a></li>
-          <li><a href="#" class="hover:text-white">여행 파트너십 문의</a></li>
-          <li><a href="#" class="hover:text-white">고객센터</a></li>
-        </ul>
-      </div>
-
-      <!-- 3) 이용약관 -->
-      <div>
-        <h3 class="!mb-4 text-sm font-semibold text-white uppercase">이용약관</h3>
-        <ul class="!space-y-2">
-          <li><a href="#" class="hover:text-white">여행 플랫폼 이용약관</a></li>
-          <li><a href="#" class="hover:text-white">개인정보 처리방침</a></li>
-          <li><a href="#" class="hover:text-white">청소년 보호정책</a></li>
-          <li><a href="#" class="hover:text-white">커뮤니티 운영정책</a></li>
-        </ul>
-      </div>
-
-      <!-- 4) 여행스토리팀 소개 -->
-      <div>
-        <h3 class="!mb-4 text-sm font-semibold text-white uppercase">여행스토리팀</h3>
-        <ul class="!space-y-2">
-          <li><a href="#" class="hover:text-white">공지사항</a></li>
-          <li><a href="#" class="hover:text-white">공식 카카오톡 채널</a></li>
-          <li><a href="#" class="hover:text-white">공식 인스타그램</a></li>
-          <li><a href="#" class="hover:text-white">공식 유튜브</a></li>
-        </ul>
-      </div>
-
-      <!-- 5) 앱 다운로드 배지 -->
-      <div class="flex items-end justify-end !space-x-4 sm:col-span-2 lg:col-span-1">
-        <div class="flex items-center justify-between !space-x-4">
-          <a href="#">
-            <img src="./../source/playstore_ic.png" alt="Google Play" class="h-5" />
+        <!-- 1) 로고 + 여행 인용문 -->
+        <div class="!space-y-2">
+          <a href="#" class="inline-block">
+            <img src="./../source/playstore_ic.png" alt="Travel Logo" class="w-8 h-8" />
           </a>
-          <a href="#">
-            <img src="./../source/pngwing.com.png" alt="App Store" class="h-7" />
-          </a>
+          <p class="text-white italic font-light">
+            The world is a book,<br />and those who do not travel<br />read only one page.
+          </p>
+          <p class="text-sm text-gray-500">Saint Augustine</p>
         </div>
+
+        <!-- 2) 여행 서비스 안내 -->
+        <div>
+          <h3 class="!mb-4 text-sm font-semibold text-white uppercase">여행 플랫폼 이용안내</h3>
+          <ul class="!space-y-2 sm:text-xs">
+            <li><a href="#" class="hover:text-white">여행 작가 신청</a></li>
+            <li><a href="#" class="hover:text-white">여행 콘텐츠 제안</a></li>
+            <li><a href="#" class="hover:text-white">여행 파트너십 문의</a></li>
+            <li><a href="#" class="hover:text-white">고객센터</a></li>
+          </ul>
+        </div>
+
+        <!-- 3) 이용약관 -->
+        <div>
+          <h3 class="!mb-4 text-sm font-semibold text-white uppercase">이용약관</h3>
+          <ul class="!space-y-2">
+            <li><a href="#" class="hover:text-white">여행 플랫폼 이용약관</a></li>
+            <li><a href="#" class="hover:text-white">개인정보 처리방침</a></li>
+            <li><a href="#" class="hover:text-white">청소년 보호정책</a></li>
+            <li><a href="#" class="hover:text-white">커뮤니티 운영정책</a></li>
+          </ul>
+        </div>
+
+        <!-- 4) 여행스토리팀 소개 -->
+        <div>
+          <h3 class="!mb-4 text-sm font-semibold text-white uppercase">여행스토리팀</h3>
+          <ul class="!space-y-2">
+            <li><a href="#" class="hover:text-white">공지사항</a></li>
+            <li><a href="#" class="hover:text-white">공식 카카오톡 채널</a></li>
+            <li><a href="#" class="hover:text-white">공식 인스타그램</a></li>
+            <li><a href="#" class="hover:text-white">공식 유튜브</a></li>
+          </ul>
+        </div>
+
+        <!-- 5) 앱 다운로드 배지 -->
+        <div class="flex items-end justify-end !space-x-4 sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center justify-between !space-x-4">
+            <a href="#">
+              <img src="./../source/playstore_ic.png" alt="Google Play" class="h-5" />
+            </a>
+            <a href="#">
+              <img src="./../source/pngwing.com.png" alt="App Store" class="h-7" />
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 하단 저작권 -->
+      <div
+        class="!mt-12 border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+        <button class="flex items-center space-x-1 hover:text-white">
+          <span>© 2025 Travel Story Platform</span>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path d="M5 8l5 5 5-5H5z" />
+          </svg>
+        </button>
+        <p class="!mt-4 !sm:mt-0">All Rights Reserved.</p>
       </div>
 
     </div>
-
-    <!-- 하단 저작권 -->
-    <div class="!mt-12 border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
-      <button class="flex items-center space-x-1 hover:text-white">
-        <span>© 2025 Travel Story Platform</span>
-        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-          <path d="M5 8l5 5 5-5H5z" />
-        </svg>
-      </button>
-      <p class="!mt-4 !sm:mt-0">All Rights Reserved.</p>
-    </div>
-
-  </div>
-</footer>
+  </footer>
 
 
 
